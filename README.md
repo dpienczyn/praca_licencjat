@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------------------------------
 
 ##Keywords
-
+****************
 aplikacja internetowa, ruby on rails, system rejestrowania, naprawa
 
 ##Autor
