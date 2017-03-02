@@ -1,6 +1,6 @@
 
-System rejestrujący usterki i naprawy
-
+                                       System rejestrujący usterki i naprawy
+----------------------------------------------------------------------------------------------------------
 Keywords
 aplikacja internetowa, ruby on rails, system rejestrowania, naprawa
 
