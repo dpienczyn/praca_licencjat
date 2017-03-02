@@ -14,7 +14,7 @@ Dominika Pienczyn, numer albumu 236389
   
 ##Wstęp
 
-1.1 Aplikacja internetowa
+###1.1 Aplikacja internetowa
 
   Aplikacja internetowa zwana również aplikacja webową to program komputerowy który pracuje na serwerze i komunikuje się poprzez sieć komputerową z hostem użytkownika będącego w takim przypadku, interaktywnym klientem aplikacji internetowej.
 Ich zaletą jest kompatybilność wieloplatformowa ponieważ nie zależą od systemu operacyjnego oraz cechuje je  łatwość w obsłudze. Do korzystania z aplikacji dany użytkownik potrzebuje tylko zainstalowanej przeglądarki internetowej. Dodatkowym atutem jest również to że w przypadku awarii urządzenia nie jesteśmy narażeni na utratę swoich danych gdyż są one gromadzone na serwerach dostawcy oprogramowania. W dzisiejszych czasach mamy szeroki wybór aplikacji, stają się one nieodłącznym elementem naszej codzienności, dzięki nim możemy np. uczyć się języka obcego niezależnie od tego w jakim położeniu się znajdujemy, możemy kontrolować ilość spożytych kalorii w ciągu dnia albo uzyskać rozpiskę z tygodniowym treningiem. Kolejnym plusem i chyba najbardziej cenionym jest to że z aplikacji nie tylko możemy korzystać na laptopie lub komputerze stacjonarnym ale na tablecie i smartfonie również.
