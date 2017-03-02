@@ -1,5 +1,5 @@
 
-                                       #AWARIA - SYSTEM REJESTRUJACY USTERKI I NAPRAWY
+                                       AWARIA - SYSTEM REJESTRUJACY USTERKI I NAPRAWY
 ----------------------------------------------------------------------------------------------------------
 
 ##Keywords
