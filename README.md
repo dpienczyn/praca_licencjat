@@ -9,7 +9,7 @@ aplikacja internetowa, ruby on rails, system rejestrowania, naprawa
 Dominika Pienczyn, numer albumu 236389
 
 ##Streszczenie
-  Praca przedstawia aplikacje internetową która jest systemem rejestrującym usterki oraz naprawy sprzętu. We wstępnej części swojej pracy skupiłam się na wymaganiach, jakich oprogramowanie musi sprostać. W kolejnym etapie opisuje technologie wybrane do implementacji oraz projekt tworzonego oprogramowania. Ostatni rozdział poświęcony jest opisowi narzędzi programistycznych wykorzystanych w implementacji.
+  Praca przedstawia aplikacje internetową którą jest system rejestrujący usterki oraz naprawy sprzętu. We wstępnej części swojej pracy skupiłam się na wymaganiach, jakich oprogramowanie musi sprostać. W kolejnym etapie opisuje technologie wybrane do implementacji oraz projekt tworzonego oprogramowania. Ostatni rozdział poświęcony jest opisowi narzędzi programistycznych wykorzystanych w implementacji.
   
 ##Wstęp
 
