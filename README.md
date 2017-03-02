@@ -1,6 +1,7 @@
 
                                        AWARIA - SYSTEM REJESTRUJACY USTERKI I NAPRAWY
-******************************************
+
+---------------------------------------------------------------------------------------------------------------------
 
 ##Keywords
 aplikacja internetowa, ruby on rails, system rejestrowania, naprawa
