@@ -33,3 +33,4 @@ Ogólnodostępne opcje to filtrowanie zgłoszeń, użytkowników, stanowisk oraz
 6. https://github.com/mislav/will_paginate
 7. https://rubygems.org/
 8. http://api.rubyonrails.org/
+9. http://bootsnipp.com/
