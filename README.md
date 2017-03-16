@@ -1,4 +1,4 @@
-  
+   
                                        AWARIA - SYSTEM REJESTRUJĄCY USTERKI I NAPRAWY
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -10,7 +10,7 @@ Dominika Pienczyn, numer albumu 236389
 
 ## Streszczenie
 
-  Praca przedstawia aplikacje internetowa która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako osoba z grupy przyczyniłam się do wykonania aplikacji od strony widokowej, wykonałam poszczególne funkcjonalności takie jak:  automatyzacja powiadomień, filtracja, uruchomiłam przypomnienie hasła na maila oraz powitalnego maila podczas rejestracji z logo firmy.   We wstępnej części swojej pracy skupiłam się na wymaganiach, jakich oprogramowanie musi sprostać. W kolejnym etapie opisuje technologie wybrane do implementacji oraz projekt tworzonego oprogramowania. Ostatni rozdział poświęcony jest opisowi narzędzi programistycznych wykorzystanych w implementacji.
+   Praca przedstawia aplikacje internetowa która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako osoba z grupy przyczyniłam się do wykonania aplikacji od strony widokowej, wykonałam poszczególne funkcjonalności takie jak:  automatyzacja powiadomień, filtracja, uruchomiłam przypomnienie hasła na maila oraz powitalnego maila podczas rejestracji z logo firmy.   We wstępnej części swojej pracy skupiłam się na wymaganiach, jakich oprogramowanie musi sprostać. W kolejnym etapie opisuje technologie wybrane do implementacji oraz projekt tworzonego oprogramowania. Ostatni rozdział poświęcony jest opisowi narzędzi programistycznych wykorzystanych w implementacji.
   
 ## Wstęp
 
