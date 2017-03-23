@@ -14,7 +14,7 @@ Dominika Pienczyn, numer albumu 236389
   
 ## Wstęp
 
-   Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. Głównym aspektem tworzonego interfejsu jest optymalne rozmieszczenie elementów na stronie zgodnie z ergonomią pracy. Kolejnym ważnym elementem który sprawia że aplikacja staje sie przyjazna użytkownikowi jest responsywność. To jeden z najważniejszych  
+   Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. Głównym aspektem tworzonego interfejsu jest optymalne rozmieszczenie elementów na stronie zgodnie z ergonomią pracy. Kolejnym ważnym elementem który powinna spełniać i sprawia, że aplikacja staje sie przyjazna dla użytkownika jest responsywność. W dzisiejszym świecie korzystamy z różnego typu urządzeń nośnych tzn tabletów, smartfonów itp. Aplikacja ma za zadanie dopasować sie do każdej rozdzielczości i każdego nośnika automatycznie. 
 
 ## Literatura
 
