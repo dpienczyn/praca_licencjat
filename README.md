@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 ## Keywords
-aplikacja internetowa, ruby on rails, system rejestrowania, naprawa, bootstrap
+aplikacja internetowa, ruby on rails, system rejestrowania, naprawa, bootstrap, frontend, interfejs użytkownika
 
 ## Autor
 Dominika Pienczyn, numer albumu 236389
