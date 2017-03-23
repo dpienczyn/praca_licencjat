@@ -20,7 +20,26 @@ Dominika Pienczyn, numer albumu 236389
 ## Spis treści
 1. Wprowadzenie
 2. Wykorzystane technologie
-* 
+* Ruby on Rails
+* Bootstrap
+3. Specyfikacja wymagań 
+* wymagania niefunkcjonalne użytkownika
+* wymagania funkcjonalne użytkownika
+* wymagania niefunkcjonalne systemowe
+4. Implementacja
+* Interfejs użytkownika
+* Elementy funkcjonalne
+5. Projekt aplikacji
+* Diagram encji
+* Diagram klas
+6. Wykorzystane narzędzia programistyczne
+* Git
+* Sublime Text
+7. Testy
+* Automatyczne
+* Manualne
+8. Podsumowanie
+9. Bibliografia
 
 
 ## Literatura
