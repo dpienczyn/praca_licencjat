@@ -14,9 +14,7 @@ Dominika Pienczyn, numer albumu 236389
   
 ## Wstęp
 
-  Stworzona aplikacja polega na rejestrowaniu usterek i napraw urządzeń. Klient – użytkownik po zarejestrowaniu się w systemie ma możliwość złożenia zgłoszenia tzn. zgłasza uszkodzony produkt uprzednio podając jego nazwę oraz opis uszkodzenia. Dodatkowo na bieżąco informowany jest droga elektroniczną o stanie swojego zgłoszenia. Zmiana statusu zgłoszenia przez pracownika powoduje automatyczne wygenerowanie odpowiedniego emaila i poinformowanie o tym użytkownika. Każdy z użytkowników ma możliwość wygenerowania PDF ze swoim zgłoszeniem. 
-Posiadając uprawnienia administratora i pracownika mamy możliwość wglądu do zaplecza. Od strony zaplecza mamy miedzy innymi dostęp do statystyk, stanowisk, działów oraz zgłoszeń. Możemy edytować zgłoszenia tzn. zmieniać dany status zgłoszenia. Mamy możliwość przydzielenia pracownikowi stanowiska oraz działu jakim się zajmuje. 
-Ogólnodostępne opcje to filtrowanie zgłoszeń, użytkowników, stanowisk oraz działów.
+    Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. 
 
 ## Literatura
 
