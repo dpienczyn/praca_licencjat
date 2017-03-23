@@ -19,12 +19,12 @@ Dominika Pienczyn, numer albumu 236389
 
 ## Literatura
 
-1. https://github.com/plataformatec/devise
+1. http://getbootstrap.com/
 2. http://helion.pl/ksiazki/ruby-on-rails-tworzenie-aplikacji-www-john-elder,rrtwww.htm
 3. https://www.railstutorial.org/book
 4. http://ruby-on-rails-tutorial.x25.pl/site
 5. http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/
-6. https://github.com/mislav/will_paginate
+6. http://quirktools.com/smaps/
 7. https://rubygems.org/
 8. http://api.rubyonrails.org/
 9. http://bootsnipp.com/ 
