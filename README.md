@@ -18,7 +18,9 @@ Dominika Pienczyn, numer albumu 236389
    W mojej pracy zamierzam przedstawić to w jak prosty i skuteczny sposób można zmienić szatę graficzną aplikacji oraz kilka innych elementów które umożliwiły zwiększenie funkcjonowania danego systemu.
    
 ## Spis treści
-1. Wstęp
+1. Wprowadzenie
+2. Wykorzystane technologie
+* 
 
 
 ## Literatura
