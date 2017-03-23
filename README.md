@@ -10,7 +10,7 @@ Dominika Pienczyn, numer albumu 236389
 
 ## Streszczenie
 
-   Praca przedstawia aplikacje internetową która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako członek grupy zajmowałam się głównie frontendem aplikacji oraz stworzyłam poszczególne elementy takie jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia oprogramowania wykorzystano framework Ruby on Rails oraz Bootstrap.
+   Praca przedstawia aplikacje internetową która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako członek grupy, zajmowałam się głównie frontendem aplikacji oraz stworzyłam poszczególne elementy takie jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia oprogramowania wykorzystano framework Ruby on Rails oraz Bootstrap.
   
 ## Wstęp
 
