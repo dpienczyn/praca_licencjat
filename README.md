@@ -31,7 +31,7 @@ Dominika Pienczyn, numer albumu 236389
 * Elementy funkcjonalne
 5. Projekt aplikacji
 * Diagram encji
-* Diagram klas
+* Diagram przepływu danych
 6. Wykorzystane narzędzia programistyczne
 * Git
 * Sublime Text
