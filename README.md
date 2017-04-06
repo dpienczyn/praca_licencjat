@@ -20,7 +20,7 @@ Dominika Pienczyn, numer albumu 236389
 ## 2.  Wykorzystane technologie
 
 ### 2.1  Ruby on Rails
-W utworzonym projekcie wykorzystano język Ruby wersje 2.3 oraz Framework Rails wersja 5.0.0. Ruby on rails jest frameworkiem open source i wykorzystuje się go do tworzenia aplikacji webowych. Napisany został z wykorzystaniem architektury MVC (ang. Model-View-Controller).
+W utworzonym projekcie wykorzystano język Ruby wersje 2.3 oraz Framework Rails wersja 5.0.0. Ruby on rails jest frameworkiem open source i wykorzystuje się go do tworzenia aplikacji webowych. Napisany został z wykorzystaniem architektury MVC *(ang. Model-View-Controller)*.
 
 Modele *(ang. Model)*  reprezentują dane aplikacji  i służą do manipulowania tymi danymi. W Railsach jest tak że jeden model odpowiada jednej tabeli w bazie danych.</br>
 
@@ -31,15 +31,19 @@ Kontrolery *(ang. Controller)* w nich znajduje się cała logika aplikacji, maj�
 ### 2.2 Bootstrap
 
 Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy wprowadzić kilka zmian w powstałym szkielecie projektu.</br>
+
 W pliku Gemfile należy dodać gem:</br>
 *gem ‘bootstrap-sass’, ‘~> 3.3.7’*</br>
+
 Bootstrap jest platformą stylów CSS więc aby zacząć z nim pracować powinno się w aplikacji stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
+
 W nowo utworzonym pliku należy umieścić u góry pliku, dwa wiersze kodu:</br>
 *@import „Bootstrap-sprockets”*</br>
 *@import „Bootstrap”*</br>
+
 Wymagane są również referencje do skryptów JavaScripts które wykorzystywane są przez platformę Bootstrap.</br>
-*//= require Bootstrap-sprockets*
-*//= require Bootstrap*
+*//= require Bootstrap-sprockets*</br>
+*//= require Bootstrap*</br>
 
 
    
