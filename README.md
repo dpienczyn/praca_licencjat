@@ -30,15 +30,13 @@ Kontrolery *(ang. Controller)* w nich znajduje się cała logika aplikacji, maj�
 
 ### 2.2 Bootstrap
 
-Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy wprowadzić kilka zmian w powstałym szkielecie projektu.</br>
+Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy w pliku Gemfile dodać gem który odpowiedzialny jest za odpowiednie działanie Frameworka.</br>
 
-W pliku Gemfile dodany został gem:</br>
+                                        *gem ‘bootstrap-sass’, ‘~> 3.3.7’*</br>
 
-*gem ‘bootstrap-sass’, ‘~> 3.3.7’*</br>
+Bootstrap jest platformą stylów CSS więc każdy kod, powinien zapisany być w pliku o dowolnej nazwie z rozszerzeniem *css.scss. Pliki musza być umieszczone w przeznaczonym do tego katalogu */app/assets/stylesheets*.</br>
 
-Bootstrap jest platformą stylów CSS więc aby wszystko działało odpowiednio trzeba stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
-
-W nowo utworzonym pliku umieszczono dwa wiersze kodu:</br>
+W plikach z rozszerzeniem musza znaleźć się dwa kody:</br>
 
 *@import „Bootstrap-sprockets”*</br>
 *@import „Bootstrap”*</br>
