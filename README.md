@@ -38,7 +38,7 @@ W pliku Gemfile należy dodać gem:</br>
 
 Bootstrap jest platformą stylów CSS więc aby zacząć z nim pracować powinno się w aplikacji stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
 
-W nowo utworzonym pliku należy umieścić u góry, dwa wiersze kodu:</br>
+W nowo utworzonym pliku należy umieścić dwa wiersze kodu:</br>
 
 *@import „Bootstrap-sprockets”*</br>
 *@import „Bootstrap”*</br>
