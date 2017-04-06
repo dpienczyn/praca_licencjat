@@ -34,7 +34,7 @@ Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podcz
 
                                         gem ‘bootstrap-sass’, ‘~> 3.3.7’
 
-Bootstrap jest platformą stylów CSS więc każdy kod, powinien zapisany być w pliku o dowolnej nazwie z rozszerzeniem *css.scss. Pliki musza być umieszczone w przeznaczonym do tego katalogu */app/assets/stylesheets*.</br>
+Bootstrap jest platformą stylów CSS więc każdy kod powinien, zapisany być w pliku o dowolnej nazwie z rozszerzeniem *css.scss. Pliki musza być umieszczone w przeznaczonym do tego katalogu */app/assets/stylesheets*.</br>
 
 W plikach z rozszerzeniem musza znaleźć się dwa kody:</br>
 
