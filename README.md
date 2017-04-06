@@ -22,22 +22,22 @@ Dominika Pienczyn, numer albumu 236389
 2. Wykorzystane technologie
 * Ruby on Rails
 * Bootstrap
-3. Specyfikacja wymagań 
-* wymagania niefunkcjonalne użytkownika
-* wymagania funkcjonalne użytkownika
-* wymagania niefunkcjonalne systemowe
-4. Implementacja
-* Interfejs użytkownika
-* Elementy funkcjonalne
-5. Projekt aplikacji
+3. Projekt i analiza aplikacji
 * Diagram encji
 * Diagram przepływu danych
-6. Wykorzystane narzędzia programistyczne
+4. Specyfikacja wymagań
+* Wymagania funkcjonalne
+* Wymagania niefunkcjonalne
+5. Implementacja
+* Interfejs graficzny użytkownika
+* Elementy funkcjonalne systemu
+6. Testy
+* Testowanie aplikacji na urządzeniach mobilnych
+* Test szybkości ładowania strony
+* Walidacja kodu
+7. Wykorzystane narzędzia programistyczne
 * Git
 * Sublime Text
-7. Testy
-* Automatyczne
-* Manualne
 8. Podsumowanie
 9. Bibliografia
 
