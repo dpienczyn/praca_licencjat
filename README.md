@@ -36,7 +36,7 @@ W pliku Gemfile dodany został gem:</br>
 
 *gem ‘bootstrap-sass’, ‘~> 3.3.7’*</br>
 
-Bootstrap jest platformą stylów CSS więc aby zacząć z nim pracować powinno się w aplikacji stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
+Bootstrap jest platformą stylów CSS więc aby wszystko działało odpowiednio trzeba stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
 
 W nowo utworzonym pliku umieszczono dwa wiersze kodu:</br>
 
