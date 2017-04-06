@@ -12,10 +12,31 @@ Dominika Pienczyn, numer albumu 236389
 
    Praca przedstawia aplikacje internetową "Awaria" która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako członek grupy, zajmowałam się głównie frontendem aplikacji oraz stworzyłam poszczególne elementy takie jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia oprogramowania wykorzystano framework Ruby on Rails oraz Bootstrap.
   
-## Wstęp
+## 1.Wstęp
 
    Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. Głównym aspektem tworzonego interfejsu jest optymalne rozmieszczenie elementów na stronie zgodnie z ergonomią pracy oraz szata graficzna która pełni ważną rolę dopełniającą i pomaga prowadzić użytkowników przez strukturę informacji prezentowaną w serwisie. Kolejnym istotnym elementem jest to aby aplikacja była responsywna. W dzisiejszym świecie korzystamy z różnego typu urządzeń nośnych tzn tabletów, smartfonów itp. dlatego tak ważne jest to aby aplikacja umiała dopasować sie do każdej rozdzielczości i każdego nośnika automatycznie. Od prawidłowo zaprojektowanego interfejsu zależy sukces strony, wygoda, intuicyjność oraz odpowiednia funkcjonalność. 
    W mojej pracy zamierzam przedstawić to w jak prosty i skuteczny sposób można zmienić szatę graficzną aplikacji oraz kilka innych elementów które umożliwiły zwiększenie funkcjonowania danego systemu.
+   
+## 2.  Wykorzystane technologie
+
+### 2.1  Ruby on Rails
+W utworzonym projekcie wykorzystano język Ruby wersje 2.3 oraz Framework Rails wersja 5.0.0. Ruby on rails jest frameworkiem open source i wykorzystuje się go do tworzenia aplikacji webowych. Napisany został z wykorzystaniem architektury MVC (ang. Model-View-Controller). 
+Modele (ang. Model)  reprezentują dane aplikacji  i służą do manipulowania tymi danymi. W Railsach jest tak że jeden model odpowiada jednej tabeli w bazie danych.
+Widoki (ang. View) tworzą interfejs użytkownika aplikacji i służą do dostarczania danych do przeglądarki internetowej bądź innego urządzenia. Są to pliki zawierające kod w języku Ruby przeplatane kodem HTML. 
+Kontrolery (ang. Controller) w nich znajduje się cała logika aplikacji, mają za zadanie połączyć model i widok. Odpowiadają za przetwarzanie żądań przychodzących z przeglądarki internetowej, za pozyskiwanie danych z modeli oraz przekazanie ich do widoków w celu ich reprezentacji. 
+### 2.2 Bootstrap
+Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy wprowadzić kilka zmian w powstałym szkielecie projektu.
+W pliku Gemfile należy dodać gem:
+gem ‘bootstrap-sass’, ‘~> 3.3.7’
+Bootstrap jest platformą stylów CSS więc aby zacząć z nim pracować powinno się w aplikacji stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu /app/assets/stylesheets.
+W nowo utworzonym pliku należy umieścić u góry pliku, dwa wiersze kodu:
+@import „Bootstrap-sprockets”
+@import „Bootstrap”
+Wymagane są również referencje do skryptów JavaScripts które wykorzystywane są przez platformę Bootstrap.
+//= require Bootstrap-sprockets
+//= require Bootstrap
+
+
    
 ## Spis treści
 1. Wprowadzenie
