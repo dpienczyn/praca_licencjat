@@ -41,7 +41,7 @@ W nowo utworzonym pliku należy umieścić u góry, dwa wiersze kodu:</br>
 *@import „Bootstrap-sprockets”*</br>
 *@import „Bootstrap”*</br>
 
-Wymagane są również referencje do skryptów JavaScripts które wykorzystywane są przez platformę Bootstrap.</br>
+Wymagane są również referencje do skryptów JavaScripts które wykorzystywane są przez platformę.</br>
 *//= require Bootstrap-sprockets*</br>
 *//= require Bootstrap*</br>
 
