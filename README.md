@@ -31,15 +31,16 @@ Dominika Pienczyn, numer albumu 236389
 5. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu
-6. Testy
+6. Responsywna aplikacja
+7. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
 * Test szybkości ładowania strony
 * Walidacja kodu
-7. Wykorzystane narzędzia programistyczne
+8. Wykorzystane narzędzia programistyczne
 * Git
 * Sublime Text
-8. Podsumowanie
-9. Bibliografia
+9. Podsumowanie
+10. Bibliografia
 
 
 ## Literatura
