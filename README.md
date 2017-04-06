@@ -32,13 +32,13 @@ Kontrolery *(ang. Controller)* w nich znajduje się cała logika aplikacji, maj�
 
 Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy wprowadzić kilka zmian w powstałym szkielecie projektu.</br>
 
-W pliku Gemfile należy dodać gem:</br>
+W pliku Gemfile dodany został gem:</br>
 
 *gem ‘bootstrap-sass’, ‘~> 3.3.7’*</br>
 
 Bootstrap jest platformą stylów CSS więc aby zacząć z nim pracować powinno się w aplikacji stworzyć plik o dowolnej nazwie z rozszerzeniem *css.scss. Plik musi być umieszczony w katalogu */app/assets/stylesheets*.</br>
 
-W nowo utworzonym pliku należy umieścić dwa wiersze kodu:</br>
+W nowo utworzonym pliku umieszczono dwa wiersze kodu:</br>
 
 *@import „Bootstrap-sprockets”*</br>
 *@import „Bootstrap”*</br>
