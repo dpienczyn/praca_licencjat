@@ -62,7 +62,7 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 5. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu
-       - Automatyzacja powiadomień
+* Automatyzacja powiadomień
 6. Responsywna aplikacja
 7. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
