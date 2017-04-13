@@ -56,6 +56,7 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 3. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu</br>
+
  Automatyzacja powiadomień</br>
  Filtracja danych</br>
  Uaktywnienie przypominania hasła na e-mail</br>
