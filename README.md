@@ -60,7 +60,7 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
  Automatyzacja powiadomień</br>
  Filtracja danych</br>
  Uaktywnienie przypominania hasła na e-mail</br>
- Uaktywnienie e-maili powitalych podczas rejestracji
+ Uaktywnienie e-maili powitalych podczas rejestracji</br>
 4. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
 * Test szybkości ładowania strony
