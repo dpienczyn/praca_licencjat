@@ -53,26 +53,19 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 2. Wykorzystane technologie
 * Ruby on Rails
 * Bootstrap
-3. Projekt i analiza aplikacji
-* Diagram encji
-* Diagram przepływu danych
-4. Specyfikacja wymagań
-* Wymagania funkcjonalne
-* Wymagania niefunkcjonalne
-5. Implementacja
+3. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu
-* Automatyzacja powiadomień
-6. Responsywna aplikacja
-7. Testy
+ Automatyzacja powiadomień
+ Filtracja danych
+ Uaktywnienie przypominania hasła na e-mail
+ Uaktywnienie e-maili powitalych podczas rejestracji
+4. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
 * Test szybkości ładowania strony
 * Walidacja kodu
-8. Wykorzystane narzędzia programistyczne
-* Git
-* Sublime Text
-9. Podsumowanie
-10. Bibliografia
+5. Podsumowanie
+6. Bibliografia
 
 
 ## Literatura
