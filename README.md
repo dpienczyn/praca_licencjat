@@ -10,7 +10,7 @@ Dominika Pienczyn, numer albumu 236389
 
 ## Streszczenie
 
-   Praca przedstawia aplikacje internetową o nazwie "Awaria" która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Zajmowałam się głównie frontendem aplikacji oraz stworzyłam poszczególne elementy takie jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia aplikacji wykorzystano system Linux, framework Ruby on Rails oraz Bootstrap a następnie wdrożono ją na serwer Heroku. Wgląd do szerszej dokumentacji dostępny jest pod adresem <https://github.com/dpienczyn/awaria1>, przechowywany od samego początku w repozytorium Githuba razem z kodem aplikacji.
+   Praca przedstawia aplikacje internetową o nazwie "Awaria" która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. Jako cel postawiłam sobie, wykonanie frontendu aplikacji oraz stworzenie poszczególnych elementów takich jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia aplikacji wykorzystano system Linux, framework Ruby on Rails oraz Bootstrap a następnie wdrożono ją na serwer Heroku. Wgląd do szerszej dokumentacji możliwy jest pod adresem <https://github.com/dpienczyn/awaria1>, przechowywany od samego początku w repozytorium Githuba razem z kodem aplikacji.
   
 ## 1.Wstęp
 
