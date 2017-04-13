@@ -56,9 +56,9 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 3. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu
- Automatyzacja powiadomień
- Filtracja danych
- Uaktywnienie przypominania hasła na e-mail
+ Automatyzacja powiadomień</br>
+ Filtracja danych</br>
+ Uaktywnienie przypominania hasła na e-mail</br>
  Uaktywnienie e-maili powitalych podczas rejestracji
 4. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
