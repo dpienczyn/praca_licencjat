@@ -53,6 +53,8 @@ W projekcie posłużono się bazą danych Postgresql w wersji 9.5. Jest to jedna
 * testowe
 * produkcyjne 
 
+Poniżej znajduję się kod który został zamieszczony w projekcie:
+
 
 
 
