@@ -46,6 +46,15 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 *//= require Bootstrap-sprockets*</br>
 *//= require Bootstrap*</br>
 
+### 2.3 Baza danych
+
+W projekcie posłużono się bazą danych Postgresql w wersji 9.5. Jest to jedna z trzech najpopularniejszych wolnodostępnych systemów zarządzania danymi. W Ruby on Rails wszystkie ustawienia bazy danych odbywają się w domyślnym pliku konfiguracyjnym config/database.yml. W pliku znajdują się trzy środowiska:
+* deweloperskie
+* testowe
+* produkcyjne 
+
+
+
 
    
 ## Spis treści
@@ -53,6 +62,7 @@ Wymagane są również referencje do skryptów JavaScripts które wykorzystywane
 2. Wykorzystane technologie
 * Ruby on Rails
 * Bootstrap
+* Baza danych
 3. Implementacja
 * Interfejs graficzny użytkownika
 * Elementy funkcjonalne systemu</br>
