@@ -55,7 +55,11 @@ W projekcie posłużono się bazą danych Postgresql w wersji 9.5. Jest to jedna
 
 Poniżej znajduję się kod który został zamieszczony w projekcie:
 
+## 3. Implementacja
 
+### 3.1 Interfejs graficzny użytkownika
+
+Pierwszy interfejs graficzny został stworzony w latach 70, XX wieku przez firme Xerox. Służy on do komunikowania się człowieka z oprogramowaniem komputera, wykorzystując obiekty wyświetlane na monitorze w trybie graficznym. 
 
 
    
