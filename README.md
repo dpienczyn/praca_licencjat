@@ -59,7 +59,13 @@ Poniżej znajduję się kod który został zamieszczony w projekcie:
 
 ### 3.1 Interfejs graficzny użytkownika
 
-Pierwszy interfejs graficzny został stworzony w latach 70, XX wieku przez firme Xerox. Służy on do komunikowania się człowieka z oprogramowaniem komputera, wykorzystując obiekty wyświetlane na monitorze w trybie graficznym. 
+Pierwszy interfejs graficzny został stworzony w latach 70, XX wieku przez firme Xerox. Służy on do komunikowania się człowieka z oprogramowaniem komputera, wykorzystując obiekty wyświetlane na monitorze w trybie graficznym. Interfejs graficzny określa wygląd oraz funkcjonalność obiektów. Składa sie zazwyczaj z:
+* menu
+* wyświetlanych na ekarnie ikonek które oznaczają obiekty i polecenia
+* okien wyświetlanych na ekranie
+* funkcje dialogowe np. zapytania potwierdzajace usuniecie lub zmiane wydanego polecenia
+
+W projekcie do stworzenia interfejsu wykorzystano framework Bootstrap który korzysta również z języka JavaScripts. 
 
 
    
