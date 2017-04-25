@@ -67,6 +67,12 @@ Pierwszy interfejs graficzny został stworzony w latach 70, XX wieku przez firme
 
 W projekcie do stworzenia interfejsu wykorzystano framework Bootstrap który korzysta również z języka JavaScripts. 
 
+## 4. Testy
+
+### Test szybkości ładowania strony
+
+Test szybkości ładowania strony polega na zbadaniu to w jakim czasie ładuje się aplikacja internetowa. Im krótszy czas tym lepsze wyniki otrzymuje 
+
 
    
 ## Spis treści
@@ -77,18 +83,18 @@ W projekcie do stworzenia interfejsu wykorzystano framework Bootstrap który kor
 * Baza danych
 3. Implementacja
 * Interfejs graficzny użytkownika
-* Elementy funkcjonalne systemu</br>
+4. Elementy funkcjonalne systemu</br>
 
- Automatyzacja powiadomień</br>
- Filtracja danych</br>
- Uaktywnienie przypominania hasła na e-mail</br>
- Uaktywnienie e-maili powitalych podczas rejestracji</br>
-4. Testy
+* Automatyzacja powiadomień
+* Filtracja danych</br>
+* Uaktywnienie przypominania hasła na e-mail</br>
+* Uaktywnienie e-maili powitalych podczas rejestracji</br>
+5. Testy
 * Testowanie aplikacji na urządzeniach mobilnych
 * Test szybkości ładowania strony
 * Walidacja kodu
-5. Podsumowanie
-6. Bibliografia
+6. Podsumowanie
+7. Bibliografia
 
 
 ## Literatura
