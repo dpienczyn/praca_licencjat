@@ -79,10 +79,11 @@ Na podstawie badań PageSpeed Insights aplikacja otrzymała następujące wyniki
 
 Szybkość działania strony na komputerach PC 86/100 - udoskonalenia na poziomie niskim</br>
 
-Należy poprawić:
+Sugestie rekomendowane przez Google co należy poprawić:
+
 1. Wyeliminuj blokujący renderowanie kod JavaScript i CSS z części strony widocznej na ekranie:
 * Strona zawiera blokujące skrypty (3) i blokujące zasoby CSS (3). Powoduje to opóźnienia w renderowaniu strony.
-
+2. 
 Szybkość działania strony na urządzeniach mobilnych 69/100 - udoskonalenia na poziomie średnim</br>
 
 Według PageSpeed Insights, strone można uznać za działającą dobrze kiedy wynik w obu testach osiągnie conajmniej 85 punktów.
