@@ -78,10 +78,16 @@ Po wykonaniu testów narzędzie wskazało obszary w których miejscach należał
 Na podstawie badań PageSpeed Insights aplikacja otrzymała następujące wyniki:</br>
 
 Szybkość działania strony na komputerach PC 86/100 - udoskonalenia na poziomie niskim</br>
+
+Należy poprawić:
+1. Wyeliminuj blokujący renderowanie kod JavaScript i CSS z części strony widocznej na ekranie:
+* Strona zawiera blokujące skrypty (3) i blokujące zasoby CSS (3). Powoduje to opóźnienia w renderowaniu strony.
+
 Szybkość działania strony na urządzeniach mobilnych 69/100 - udoskonalenia na poziomie średnim</br>
 
 Według PageSpeed Insights, strone można uznać za działającą dobrze kiedy wynik w obu testach osiągnie conajmniej 85 punktów.
-   
+
+
 ## Spis treści
 1. Wprowadzenie
 2. Wykorzystane technologie
