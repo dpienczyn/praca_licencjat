@@ -71,8 +71,7 @@ W projekcie do stworzenia interfejsu wykorzystano framework Bootstrap który kor
 
 ### Test szybkości ładowania strony
 
-Test szybkości ładowania strony polega na zbadaniu to w jakim czasie ładuje się aplikacja internetowa. Im krótszy czas tym lepsze wyniki otrzymuje 
-
+Test szybkości ładowania strony polega na zbadaniu, to w jakim czasie ładuje się aplikacja. Im krótszy czas tym wyższa pozycja w wyszukiwarkach internetowych. Wywiera także istotny wpływ na przeglądanie podstron przez użytkownika i szybkie dotarcie przez niego do porządanych informacji co przekłada się na oszczędność czasu oraz oszczędzają transfer w przypadku urządzeń mobilnych .   
 
    
 ## Spis treści
