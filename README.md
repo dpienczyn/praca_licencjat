@@ -73,6 +73,13 @@ W projekcie do stworzenia interfejsu wykorzystano framework Bootstrap który kor
 
 Test szybkości ładowania strony polega na zbadaniu, to w jakim czasie ładuje się aplikacja. Im krótszy czas tym wyższa pozycja w Google. Według przeprowadzonych badań im wolniej ładuje się strona, tym mniej czasu spędza na niej użytkownik. Wywiera także istotny wpływ na przeglądanie podstron przez użytkownika i szybkie dotarcie przez niego do porządanych informacji co przekłada się na oszczędność czasu oraz oszczedność transferu w przypadku urządzeń mobilnych. Dzięki szybko działającej stronie roboty wyszukiwarek mogą szybciej przeskanować strone i wyszukać nowe treści.
 
+Po wykonaniu testów narzędzie wskazało obszary w których miejscach należałoby użyć udoskonaleń, by strona ładowała się o wiele szybciej. Obszary dzielone są według trzech priorytetów: wysokim, średnim, niskim.</br>
+
+Na podstawie badań PageSpeed Insights aplikacja otrzymała następujące wyniki:</br>
+
+Szybkość działania strony na komputerach PC 86/100 - udoskonalenia na poziomie niskim</br>
+Szybkość działania strony na urządzeniach mobilnych 69/100 - udoskonalenia na poziomie średnim</br>
+
    
 ## Spis treści
 1. Wprowadzenie
