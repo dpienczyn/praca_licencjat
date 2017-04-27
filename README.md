@@ -88,7 +88,12 @@ Szybkość działania strony na urządzeniach mobilnych 69/100 - udoskonalenia n
 
 Według PageSpeed Insights, strone można uznać za działającą dobrze kiedy wynik w obu testach osiągnie conajmniej 85 punktów.
 
+### Walidacja kodu
 
+Walidacja to inaczej proces weryfikowania poprawności składniowej pliku XHTML. Wyróznia się dwa rodzaje takiej poprawności składniowej: połączone z kontrolą zgodności z oficjalną specyfikacją XHTML, gdzie zastosowane zostają serwisy siecowe tak zwane parasery oraz sprawdzanie wyłącznie poprawności składniowej w tym przypadku sotosuje się specjalne programy do tego przeznaczone czyli walidatory. 
+
+Dlaczego należy używać walidacji:
+1. Ponieważ jeżeli kod strony jest poprawny to prawdopodobieństwo że strona będzie dobrze wyświetlana na większości przeglądarek jest większa. 
 ## Spis treści
 1. Wprowadzenie
 2. Wykorzystane technologie
