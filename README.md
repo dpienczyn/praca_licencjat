@@ -94,6 +94,9 @@ Walidacja to inaczej proces weryfikowania poprawności składniowej pliku XHTML.
 
 Dlaczego należy używać walidacji:
 1. Ponieważ jeżeli kod strony jest poprawny to prawdopodobieństwo że strona będzie dobrze wyświetlana na większości przeglądarek jest większa. 
+2. Gdy strona nie zawiera błędów to szybciej się ładuje, gdyż nie musi zastanawiać się jak interpretować nie właściwie zamieszczonych znaczników.
+3. Możliwość wykrycia i poprawy błedów przed oddaniem strony do użytku.
+4. Dzięki walidacji możemy nabyć dodatkowej wiedzy o języku XHTML oraz w przypadku zmiany specyfikacji.
 ## Spis treści
 1. Wprowadzenie
 2. Wykorzystane technologie
