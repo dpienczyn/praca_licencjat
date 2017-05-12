@@ -3,8 +3,7 @@
 \documentclass[openright]{xmgr}
 
 % install minted package to highlight source code
-% \usepackage{minted}
-
+%\usepackage{minted}
 %\defaultfontfeatures{Scale=MatchLowercase}
 %\setmainfont[Numbers=OldStyle,Ligatures=TeX]{Minion Pro}
 %\setsansfont[Numbers=OldStyle,Ligatures=TeX]{Myriad Pro}
@@ -23,7 +22,7 @@
 \nralbumu {236\,389}
 \email    {walenty@szczesny.com.pl}
 
-\title    {System rejestrowania usterek i napraw}
+\title    {System rejestrowania usterek ~ i napraw}
 \date     {2017}
 \miejsce  {Gdańsk}
 
@@ -38,11 +37,14 @@
 	
 	% streszczenie
 	\begin{abstract}
-		Praca przedstawia aplikacje internetową o nazwie "Awaria" która jest systemem rejestrującym usterki oraz naprawy sprzętu i została stworzona w grupie 3-osobowej. W pracy zajmowałam się wykonaniem frontendu aplikacji oraz stworzeniem poszczególnych elementów takich jak: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji. Do stworzenia aplikacji wykorzystano system Linux, baze danych Postgresql, framework Ruby on Rails oraz Bootstrap a następnie wdrożono ją na serwer Heroku. Wgląd do szerszej dokumentacji możliwy jest pod adresem \texttt{\url{https://github.com/dpienczyn/awaria1}}, przechowywany w repozytorium Githuba razem z kodem aplikacji. Aplikacja dostępna jest pod adresem \texttt{\url{https://awaria-system.herokuapp.com/}}.
+		Praca przedstawia aplikację internetową o nazwie ,,Awaria'', która jest systemem rejestrującym usterki oraz naprawy sprzętu. Została stworzona w grupie 3-osobowej (Kamil Pek, Marcin Dawidowski, Dominika Pienczyn). W projekcie wykonałam szatę graficzną, tak zwany frontend aplikacji. Podczas tworzenia skupiałam się na tym, aby strona dostosowana była do urządzeń mobilnych, co obecnie jest standardem. Zajmowałam się również przeprowadzaniem testów strony, które uświadomiły mi jakie elementy należy jeszcze poprawić. Zaimplementowałam elementy, które poprawiły funkcjonowanie aplikacji: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji.\\ 
+		\indent Do stworzenia aplikacji wykorzystano system Linux, bazę danych PostgreSQL, framework Ruby on Rails oraz Bootstrap, a następnie wdrożono ją na serwer Heroku.\\
+		\indent Wgląd do szerszej dokumentacji możliwy jest pod adresem \texttt{\url{https://github.com/dpienczyn/awaria1}} i przechowywany jest w repozytorium GitHuba razem z kodem aplikacji.\\
+		\indent Aplikacja dostępna jest pod adresem \texttt{\url{https://awaria-system.herokuapp.com/}}.
 	\end{abstract}
 	
 	% słowa kluczowe
-	\keywords{aplikacja internetowa, ruby on rails, system rejestrowania, naprawa, bootstrap, interfejs graficzny użytkownika}
+	\keywords{aplikacja internetowa, aplikacja mobilna, ruby on rails, system rejestrowania, naprawa, bootstrap, interfejs graficzny użytkownika}
 	
 	% tytuł i spis treści
 	\maketitle
@@ -50,30 +52,30 @@
 	% wstęp
 	\introduction
 	
-	Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. Głównym aspektem tworzonego interfejsu jest optymalne rozmieszczenie elementów na stronie zgodnie z ergonomią pracy oraz szata graficzna która pełni ważną rolę dopełniającą i pomaga prowadzić użytkowników przez strukturę informacji prezentowaną w serwisie. Kolejnym istotnym elementem jest to aby aplikacja była responsywna. W dzisiejszym świecie korzystamy z różnego typu urządzeń nośnych tzn tabletów, smartfonów itp. dlatego tak ważne jest to aby aplikacja umiała dopasować sie do każdej rozdzielczości i każdego nośnika automatycznie. Od prawidłowo zaprojektowanego interfejsu zależy sukces strony, wygoda, intuicyjność oraz odpowiednia funkcjonalność. W mojej pracy zamierzam przedstawić to w jak prosty i skuteczny sposób można zmienić szatę graficzną aplikacji oraz kilka innych elementów które umożliwiły zwiększenie funkcjonowania danego systemu.
+	Graficzny interfejs użytkownika to ogólne określenie sposobu prezentacji informacji przez komputer oraz interakcji z użytkownikiem, polegające na rysowaniu i obsługiwaniu widżetów. Głównym aspektem tworzonego interfejsu jest optymalne rozmieszczenie elementów na stronie, zgodnie z ergonomią pracy oraz szatą graficzną, która pełni ważną rolę dopełniającą i pomaga prowadzić użytkowników przez strukturę informacji prezentowaną w serwisie. Kolejnym istotnym elementem jest to, aby aplikacja była responsywna. W dzisiejszym świecie korzystamy z różnego typu urządzeń nośnych tzn tabletów, smartfonów itp, dlatego tak ważne jest to, aby aplikacja umiała dopasować się do każdej rozdzielczości i każdego nośnika automatycznie. Od prawidłowo zaprojektowanego interfejsu zależy sukces strony, wygoda, intuicyjność oraz odpowiednia funkcjonalność. W mojej pracy zamierzam przedstawić to jak w prosty i skuteczny sposób można zmienić szatę graficzną aplikacji oraz kilka innych elementów, które umożliwiły zwiększenie funkcjonowania danego systemu.
 	
 	\chapter{Wykorzystane technologie}
 	
 	\section{Ruby on Rails}
 	
-	W utworzonym projekcie wykorzystano język Ruby wersje 2.3 oraz Framework Rails wersja 5.0.0. Ruby on rails jest frameworkiem open source i wykorzystuje się go do tworzenia aplikacji webowych. Napisany został z wykorzystaniem architektury MVC \emph{(ang. Model-View-Controller)}.\\
+	W utworzonym projekcie wykorzystano język Ruby wersje 2.3 oraz framework Rails wersja 5.0.0. Ruby on rails jest frameworkiem open source i wykorzystuje się go do tworzenia aplikacji webowych. Napisany został z wykorzystaniem architektury MVC \emph{(ang. Model-View-Controller)}.\\
 	
-	\textbf{Modele} \emph{(ang. Model)} reprezentują dane aplikacji i służą do manipulowania tymi danymi, model odpowiada jednej tabeli w bazie danych.\\
+	\textbf{Modele} \emph{(ang. Model)} reprezentują dane aplikacji i służą do manipulowania tymi danymi. Model odpowiada jednej tabeli w bazie danych.\\
 	
 	
-	\textbf{Widoki} \emph{(ang. View)} tworzą interfejs użytkownika aplikacji i służą do dostarczania danych do przeglądarki internetowej bądź innego urządzenia. Są to pliki zawierające kod w języku Ruby i HTML.\\
+	\textbf{Widoki} \emph{(ang. View)} tworzą interfejs użytkownika aplikacji i służą do dostarczania danych do przeglądarki internetowej, bądź innego urządzenia. Są to pliki zawierające kod w języku Ruby i HTML.\\
 	
-	\textbf{Kontrolery} \emph{(ang. Controller)} w nich znajduje się cała logika aplikacji, mają za zadanie połączyć model i widok. Odpowiadają za przetwarzanie żądań przychodzących z przeglądarki internetowej, za pozyskiwanie danych z modeli oraz przekazanie ich do widoków w celu ich reprezentacji.
+	\textbf{Kontrolery} \emph{(ang. Controller)} w nich znajduje się cała logika aplikacji. Mają za zadanie połączyć model i widok. Odpowiadają za przetwarzanie żądań przychodzących z przeglądarki internetowej, za pozyskiwanie danych z modeli oraz przekazanie ich do widoków w celu ich reprezentacji.
 
 	
 	\section{Bootstrap}
 	
-	Bootstrap – Framework CSS, zawiera wiele narzędzi które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza by rozpocząć tworzyć coś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap należy w pliku Gemfile dodać gem który odpowiedzialny jest za odpowiednie funkcjonowanie Frameworka.
+	Bootstrap, framework CSS, zawiera wiele narzędzi, które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza, by rozpocząć tworzenie czegoś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap, należy w pliku Gemfile dodać gem, który odpowiedzialny jest za odpowiednie funkcjonowanie Frameworka.
 	
 	\begin{center}
 		\textbf{\textit{gem ‘bootstrap-sass’, ‘~> 3.3.7’}}
 	\end{center}
-	Bootstrap jest platformą stylów CSS więc każdy kod powinien, zapisany być w pliku o dowolnej nazwie z rozszerzeniem \textit{*css.scss}. Pliki musza być umieszczone w przeznaczonym do tego katalogu \textit{/app/assets/stylesheets.\textbf{}}\\
+	Bootstrap jest platformą stylów CSS, więc każdy kod powinien być zapisany w pliku o dowolnej nazwie z rozszerzeniem \textit{*css.scss}. Pliki musza być umieszczone w przeznaczonym do tego katalogu \textit{/app/assets/stylesheets.\textbf{}}\\
 	
 	\begin{flushleft}
 		W plikach z rozszerzeniem musza znaleźć się dwa kody:
@@ -86,37 +88,18 @@
 	
 	
 	\begin{flushleft}
-		Wymagane są również referencje do skryptów JavaScripts które wykorzystywane są przez platformę.
+		Wymagane są również referencje do skryptów JavaScripts, które wykorzystywane są przez platformę.
 	\end{flushleft}
 	
 	\textit{//= require Bootstrap-sprockets\textbf{}}\\
 	
-	\textit{//= require Bootstrap\textbf{}}\\
+	\textit{//= require Bootstrap\textbf{}}
 	
-	\section{Baza danych}
-	W projekcie posłużono się bazą danych Postgresql w wersji 9.5. Jest to jedna z trzech najpopularniejszych wolnodostępnych systemów zarządzania danymi. W Ruby on Rails wszystkie ustawienia bazy danych odbywają się w domyślnym pliku konfiguracyjnym \textit{config/database.yml.} W pliku znajdują się trzy środowiska:\\
-	
-	\begin{itemize}
-		\item
-	\textbf{rozwojowe} \textit{(ang. development)} - jest używane na komputerze programisty aby mógł kontrolować zmiany które zaistaniały w projekcie\\
-	
-	\item
-	\textbf{testowe} \textit{(ang. test)} - służy do uruchamiania testów automatycznych\\
-	
-	\item
-	\textbf{produkcyjne} \textit{(ang. production)} - jest stosowane wtedy kiedy aplikacja uruchomiona jest na serwerze produkcyjnym\\
-\end{itemize}
-	Poniżej znajduję się kod środowiska produkcyjnego, zamieszczonego w projekcie:\\
-\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Zawartość pliku \textit{database.yml}]
-production:
-<<: *default
-database: awaria_production
-username: awaria
-password: PG#sysawa88!!
-\end{lstlisting}
 	
 	\chapter{Implementacja}
-	\subsection{Interfejs graficzny użytkownika}
+	
+	\section {Interfejs graficzny użytkownika}
+	
 	Pierwszy interfejs graficzny został stworzony w latach 70, XX wieku przez firme Xerox. Służy on do komunikowania się człowieka z oprogramowaniem komputera, wykorzystując obiekty wyświetlane na monitorze w trybie graficznym. Interfejs graficzny określa wygląd oraz funkcjonalność obiektów. \\
 
 Składa sie zazwyczaj z:\\
@@ -126,7 +109,7 @@ Składa sie zazwyczaj z:\\
 	menu
 	
 	\item
-	 wyświetlanych na ekarnie ikonek które oznaczają obiekty i polecenia
+	 wyświetlanych na ekarnie ikonek, które oznaczają obiekty i polecenia
 	
 	\item
 	okien wyświetlanych na ekranie
@@ -134,13 +117,13 @@ Składa sie zazwyczaj z:\\
 	funkcji dialogowych np. zapytań potwierdzajacych usunięcie lub zmiane wydanego polecenia
 \end{itemize}
 	
-	\textbf{Projektowanie responsywne} \textit{(ang. responsive)} w polskim tłumaczeniu oznacza to coś czułego, wrażliwego i ma na celu tworzenie stron internetowych które dynamicznie adaptują się do swojego środowiska. Dzięki temu strona ma płynną, elastyczną strukturę i dopasowuje się do dowlonego urządzenia: smartfona, tableta, telewizora albo komputera. Ponadto strony responsywne są kompatybilne z interfejsami dotykowymi urządzeń mobilnych. 
+	\textbf{Projektowanie responsywne} \textit{(ang. responsive)} w polskim tłumaczeniu oznacza to coś czułego, wrażliwego i ma na celu tworzenie stron internetowych, które dynamicznie adaptują się do swojego środowiska. Dzięki temu strona ma płynną, elastyczną strukturę i dopasowuje się do dowlonego urządzenia: smartfona, tableta, telewizora lub komputera. Ponadto strony responsywne, są kompatybilne z interfejsami dotykowymi urządzeń mobilnych. 
 	\newpage
 	\section{Panel logowania}
 	
-	Panel logowania użytkownika jest dla aplikacji istotnym elementem, ponieważ odbiorca wchodząc na strone zostaje automatycznie do niego przekierowany. Dlatego zadbałam o to, by strona w projekcie była atrakcyjna graficznie a zarazem prosta w obsłudze. Główną zasadą, której trzymałam się podczas tworzenia front-endu to estetyka oraz niezróżnicowany wygląd aplikacji.  
+	Panel logowania użytkownika jest dla aplikacji istotnym elementem, ponieważ odbiorca wchodząc na strone zostaje automatycznie do niego przekierowany. Dlatego zadbałam o to, by strona w projekcie była atrakcyjna graficznie, a zarazem prosta w obsłudze. Główną zasadą, której trzymałam się podczas tworzenia front-endu była estetyka oraz niezróżnicowany wygląd aplikacji.  
 	
-	Wygląd panelu logowania przed ostylowaniem kodem HTML wyglądał przeciętnie, zawierał tylko jedną klase \textit{div class="field".} Format panelu został przedstawiony poniżej:
+	Wygląd panelu logowania przed ostylowaniem kodem HTML wyglądał przeciętnie, zawierał tylko jedną klase \textit{div class="field".}. Format panelu został przedstawiony poniżej:
 	
 	\begin{figure}[!tbh]
 		\centering
@@ -187,18 +170,18 @@ Składa sie zazwyczaj z:\\
 	</div>
 	\end{lstlisting}
 
-W kodzie zastosowano poniższą klase \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}} dzięki której uzyskujemy efekt strony responsywnej i możliwej do obejrzenia na dowolnym wyświetlaczu:\\
+W kodzie zastosowano poniższą klase \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}}, dzięki której uzyskujemy efekt strony responsywnej i możliwej do obejrzenia na dowolnym wyświetlaczu:\\
 \textbf{1.} \textit{col-xs} stosuje się dla bardzo małych wyświetlaczy (szerokość ekranu mniejsza niż 768 pikseli)\\
 \textbf{2.} \textit{col-sm} stosuje się dla małych wyświetlaczy (szerokość ekranu większa równa 768 pikseli)\\
 \textbf{3.} \textit{col-md} stosuje się dla średnich wyświetlaczy (szerokość ekranu wieksza, równa 992 pikseli)\\
 
-Klasy służące do przesuwania kolumn względem siebie służą do zwiększenia odstępu po lewej stronie kolumny: \\
-1. \textit{col-sm-offset-2} w przypadku stron dla małych wyświetlaczy, jeżeli chcemy przenieść kolumne, obejmującą dwie kolumny w prawą strone\\
-2. \textit{col-md-offset-3} w przypadku stron dla średnich wyświetlaczy, jeżeli chcemy przenieść kolumne, obejmującą trzy kolumny w prawą strone\\
+Klasy służące do przesuwania kolumn względem siebie, służą do zwiększenia odstępu po lewej stronie kolumny: \\
+1. \textit{col-sm-offset-2} w przypadku stron dla małych wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą dwie kolumny w prawą strone\\
+2. \textit{col-md-offset-3} w przypadku stron dla średnich wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą trzy kolumny w prawą strone\\
 \newpage
 Aby była możliwość tworzenia rzędów, to \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}} musi zostać umieszczony w kontenerze \textit{div class="container"} oraz wewnątrz kontenera musi znaleźć się klasa \textit{div class="row"}.\\
 
-Klasa \textit{form-group} służy do tworzenia formularzy, natomiast klasa \textit{class: "form-control input-lg"} znajdująca się pomiedzy znacznikami kodu Ruby sprawia że element rozciaga się na całą dostępną szerkość ekranu.
+Klasa \textit{form-group} służy do tworzenia formularzy, natomiast klasa \textit{class: "form-control input-lg"} znajdująca się pomiedzy znacznikami kodu Ruby sprawia, że element rozciaga się na całą dostępną szerkość ekranu.
 
 W pliku CSS odnosimy sie do styli klasy  \textit{hr class="colorgraph"} w której określamy rozmiar wysokości obszaru \textit{(height)}, cechy górnego obramowania \textit{(border-top)} lub ustawiamy kolor tła elementu \textit{(background)}.
 \begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Kod CSS dla panelu logowania]
@@ -220,11 +203,11 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 \end{figure}	
 	
 	\section{Tabela zgłoszeń}
-	Tabele tworzy się poprzez znacznik \textit{<table> ... </table>} i wystarczy dodać do nich klase \textit{.acrylic} by uzyskać dopełnienie oraz linie oddzielające wiersze. Między znacznikami \textit{<tr>, <th>} umieszczamy kategorie na które ma dzielić sie dana tabelka. Wszystkie kategorie obudowane znacznikiem \textit{<th>} należy umieścić w sekcji znacznika \textit{<thead>}. Natomiast zawartość danych tabeli umieszczamy miedzy znacznikami \textit{<td>}, ważne jest to by każda dana odpowiadała prawidłowej kolejności danej kategori.
+	Tabele tworzy się poprzez znacznik \textit{<table> ... </table>} i wystarczy dodać do nich klasę \textit{.acrylic}, by uzyskać dopełnienie oraz linie oddzielające wiersze. Między znacznikami \textit{<tr>, <th>} umieszczamy kategorie, na które ma dzielić się dana tabelka. Wszystkie kategorie obudowane znacznikiem \textit{<th>}, należy umieścić w sekcji znacznika \textit{<thead>}. Natomiast zawartość danych tabeli umieszczamy między znacznikami \textit{<td>}, ważne jest to, by każda dana odpowiadała prawidłowej kolejności danej kategori.
 	
-	Wszystkie dane obudowane znacznikami \textit{<td>} należy umieścić w sekcji znacznika \textit{<tbody>}.  
+	Wszystkie dane obudowane znacznikami \textit{<td>}, należy umieścić w sekcji znacznika \textit{<tbody>}.  
 	
-	Tabela zgłoszeń po wygenerowniu kodu nie posiadała przycisków jej kolumny i wiersze nie były oddzielone linią w żaden sposób a pod wpływem zmniejszania obrazu, tabela nie dopasowywała się do narzuconej jej rozdzielczości, czego efektem był brak możliwości odczytu niektórych danych znajdujących sie w tabelce. 
+	Tabela zgłoszeń, po wygenerowniu kodu nie posiadała przycisków jej kolumny i wiersze nie były oddzielone linią w żaden sposób. Pod wpływem zmniejszania obrazu, tabela nie dopasowywała się do narzuconej jej rozdzielczości, czego efektem był brak możliwości odczytu niektórych danych, znajdujących sie w tabelce. 
 	
 	\begin{figure}[!tbh]
 		\centering
@@ -238,19 +221,19 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		\caption{Ostylowana kodem HTML tabela zgłoszeń}
 	\end{figure}
 	
-	Do stworzenia tabelki wykorzystano klase \textit{div class="table-responsive"} dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
+	Do stworzenia tabelki wykorzystano klasę \textit{div class="table-responsive"}, dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny]
 	<td><%= link_to('Usuń', zgloszeny, method: :delete, data: { confirm: 'Jesteś pewny?' }, class:'btn btn-danger btn-xs') %></td>
 	\end{lstlisting}
 	
-	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger} dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
+	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger}, dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
 	
 	\chapter{Elementy funkcjonalne systemu}
 	
-	\subsection{Uaktywnienie przypominania hasła na e-mail}
+	\section{Uaktywnienie przypominania hasła na e-mail}
 	
-	Konfiguracji przpominania hasła na adres e-mail użytkownika, dokonuje się w pliku konfiguracyjnym \textit{config/environments/production.rb.} Ze względu na wdrożenie aplikacji na serwer Heroku wykorzystałam dodatkowy element tej platformy do korespondencji z użytkownikiem o nazwie Sendgrid.  
+	Konfiguracji przpominania hasła na adres e-mail użytkownika, dokonuje się w pliku konfiguracyjnym \textit{config/environments/production.rb.} Ze względu na wdrożenie aplikacji na serwer Heroku, wykorzystałam dodatkowy element tej platformy do korespondencji z użytkownikiem o nazwie Sendgrid.  
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Konfiguracja pliku \textit{production.rb}]
 	config.action_mailer.smtp_settings = {
@@ -264,11 +247,11 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	}
 	\end{lstlisting}
 	
-	W pliku dane na temat hasła oraz nazwy użytkownika, zostały ukryte i dostępne są tylko dla użytkowników do tego uprawnionych. Wszystkie dane znajdują się na platformie Heroku. W sekcji \textit{domain} deklarujemy adres url strony pod który została wdrożona.
+	W pliku, dane na temat hasła oraz nazwy użytkownika, zostały ukryte i dostępne są tylko dla użytkowników do tego uprawnionych. Wszystkie dane znajdują się na platformie Heroku. W sekcji \textit{domain} deklarujemy adres url strony pod który została wdrożona.
 	\newpage
 	\section{Uaktywnienie e-maili powitalnych podczas rejestracji}
 	
-	W pracy wykorzystałam element e-maili powitalnych podczas pierwszej wizyty na stronie, które informują użytkownika o pozytywnym przejściu rejestracji. Wiadomości powitalne wysyłane są automatycznie, tuż po aktywacji adresu mailowego. Są elementem podtrzymania dalszej komunikacji z klientem. Do zaimplementowania tej funkcjonalności wykorzystałam plik \textit{app/models/user.rb.} 
+	W pracy wykorzystałam element e-maili powitalnych, podczas pierwszej wizyty na stronie, które informują użytkownika o pozytywnym przejściu rejestracji. Wiadomości powitalne wysyłane są automatycznie, tuż po aktywacji adresu mailowego. Są elementem podtrzymania dalszej komunikacji z klientem. Do zaimplementowania tej funkcjonalności wykorzystałam plik \textit{app/models/user.rb.} 
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Kod odpowiedzialny za wysyłanie e-mail powitalnych]
 	class User < ApplicationRecord
@@ -278,10 +261,10 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	end
 	\end{lstlisting}
 	
-	W treści wiadomości, na adres użytkownika zostaje wysłane hasło, wprowadzone podczas rejestracji oraz logo firmy. Wiadomości przesłane zostają w formie \textit{html} oraz \textit{txt.} Wybrałam te dwa formaty ponieważ \textit{txt} z pewnością trafi do każdego odbiorcy, natomiast wiadomości w formie \textit{html} mogą być nieczytelne dla niektórych przeglądarek pocztowych. Różnica polega na tym że dzięki kodzie HTML wiadomości wyglądają atrakcyjniej graficznie.
+	W treści wiadomości, na adres użytkownika zostaje wysłane hasło, wprowadzone podczas rejestracji oraz logo firmy. Wiadomości przesłane zostają w formie \textit{html} oraz \textit{txt.} Wybrałam te dwa formaty, ponieważ \textit{txt} z pewnością trafi do każdego odbiorcy, natomiast wiadomości w formie \textit{html} mogą być nieczytelne dla niektórych przeglądarek pocztowych. Różnica polega na tym, że dzięki kodzie HTML wiadomości wyglądają atrakcyjniej graficznie.
 	Treści wiadomości powitalnych w formie \textit{.html} oraz \textit{.txt} zostały zawarte w pliku \textit{app/views/welcome\_mailer.}
 	
-	Na kolejnej stronie można zobaczyć jak graficznie prezentują się wiadomości powitalne oraz jaką zawierają treść. 
+	Na kolejnej stronie można zobaczyć, jak graficznie prezentują się wiadomości powitalne oraz jaką zawierają treść. 
 	\newpage
 	\begin{figure}[!tbh]
 		\centering
@@ -291,8 +274,8 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	\newpage
 	\section{Przeszukiwanie danych w czasie rzeczywistym}
 	
-	W aplikacji wykonano dodatkowo przeszukiwanie danych w czasie rzeczywistym, umożliwiające wyszukanie danych w tabeli. Używając filtru, można wyświetlić tylko dane które nas interesują i ukryć pozostałe. Po przefiltrowaniu danych w zakresie tabel można ponownie zastosować filtr w celu otrzymania aktualnych danych badź można wyczyścić filtr w celu ponownego wyświetlenia wszystkich danych w tabeli. 
-	Filtr który zastosowałam w projekcie został stworzony dla tabel: użytkownika, stanowiska, działu, zgłoszeń. W przeszukiwniu danych dla jednej tabeli zastosowałam kilka warunków. Podczas wpisywania fraz, program nie rozróżnia wielkości liter za co odpowiada operator ILIKE .\\
+	W aplikacji wykonano dodatkowo przeszukiwanie danych w czasie rzeczywistym, umożliwiające wyszukanie danych w tabeli. Używając filtru, można wyświetlić tylko dane, które nas interesują i ukryć pozostałe. Po przefiltrowaniu danych w zakresie tabel można ponownie zastosować filtr w celu otrzymania aktualnych danych, badź można wyczyścić filtr w celu ponownego wyświetlenia wszystkich danych w tabeli. 
+	Filtr, który zastosowałam w projekcie został stworzony dla tabel: użytkownika, stanowiska, działu, zgłoszeń. W przeszukiwniu danych dla jednej tabeli, zastosowałam kilka warunków. Podczas wpisywania fraz, program nie rozróżnia wielkości liter za co odpowiada operator ILIKE .\\
 	
 	\textbf{Tabela użytkowników, filtrowanie według:}\\
 	\textendash\space imię \textit{(ang. first\_name)}\\
@@ -325,7 +308,7 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	end
 	\end{lstlisting}
 	
-	W tym pliku zostały zawarte wszystkie dane które umożliwiają przeszukanie tabeli zgłoszenie. Referencje użytkownika zostały powiązane z tabelą zgłoszeń co umożliwia nie tylko wyszukanie interesującego nas zgłoszenia jak również na podstawie zgłoszeń możemy wyszukać w bazie użytkownika oraz sprawdzić jakie zgłoszenie złożył i w jakim czasie.
+	W tym pliku zostały zawarte wszystkie dane, które umożliwiają przeszukanie tabeli ,,zgłoszenie''. Referencje użytkownika zostały powiązane z tabelą zgłoszeń, co umożliwia nie tylko wyszukanie interesującego nas zgłoszenia, jak również na podstawie zgłoszeń możemy wyszukać w bazie użytkownika oraz sprawdzić jakie zgłoszenie złożył i w jakim czasie.
 	Funkcjonowanie przeszukiwania danych w czasie rzeczywistym opiera się także na kodzie JavaScript:\\
 	
 	\textit{app/assets/javascripts/custom.js}
@@ -335,11 +318,11 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	});
 	\end{lstlisting}
 	
-	Dzięki wykorzystanemu kodzie JavaScripts użytkownik podczas wpisywania frazy nie musi dodatkowo klikać na przycisk, proces odbywa się w momencie, kiedy w wyszukiwarke zostaje wprowadzona pierwsza litera, czas wyszukiwania to 200 milisekund. 
+	Dzięki wykorzystanemu kodzie JavaScripts użytkownik podczas wpisywania frazy nie musi dodatkowo klikać na przycisk, proces odbywa się w momencie, kiedy w wyszukiwarke zostaje wprowadzona pierwsza litera. Czas wyszukiwania to 200 milisekund. 
 	\newpage
 	\section{Automatyzacja powiadomień}
 	
-	W projekcie utworzyłam automatyzacje powiadomień która polega na byciu w stałym kontakcie z użytkownikiem który zgłosił usterke w systemie. Poprzez rejestracje w systemie, za pomocą adresu e-mail, na ten sam adres otrzymuje powiadomienia zawierające aktualny status swojego produktu. Na powiadomienia składają się trzy etapy:
+	W projekcie utworzyłam automatyzacje powiadomień, która jest w stałym kontakcie z użytkownikiem zgłaszającym usterkę w systemie. Poprzez rejestrację w systemie, za pomocą adresu e-mail, na ten sam adres otrzymuje powiadomienia zawierające aktualny status swojego produktu. Na powiadomienia składają się trzy etapy:
 	
 	\begin{itemize}
 		\item
@@ -356,23 +339,11 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Opis statusów w modelu]
 	class CustomerNotificationMailer < ApplicationMailer
+	
 	def started(zgloszenie_id, user_id)
 	@zgloszenie = Zgloszenie.find(zgloszenie_id)
 	user = User.find(user_id)
 	mail(subject: default_i18n_subject, to: user.email) 
-	end
-	
-	def inprogress(zgloszenie_id, user_id)
-	@zgloszenie = Zgloszenie.find(zgloszenie_id)
-	user = User.find(user_id)
-	mail(subject: default_i18n_subject, to: user.email) 
-	end
-	
-	def finished(zgloszenie_id, user_id)
-	@zgloszenie = Zgloszenie.find(zgloszenie_id)
-	user = User.find(user_id)
-	mail(subject: default_i18n_subject, to: user.email) 
-	end
 	end
 	\end{lstlisting} 
 	
@@ -393,29 +364,26 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	Metoda \textit{def update} odpowiada za edycję zgłoszeń do której przypisano status \textit{inprogress} i \textit{finished}, biorąc pod uwage to że status \textit{started} podczas edycji, przy kolejnej edycji, nie może  uzyskać już statusu początkowego.
 	
-	\chapter{Testy}
-	
-	\subsection{Testowanie aplikacji na urządzeniach mobilnych}
+	\chapter{Testowanie aplikacji na urządzeniach mobilnych}
 	
 	Test optymalizacji mobilnej jest jedną z wielu rzeczy, które są bardzo istotne a z tego względu że więcej osób na dzień dzisiejszy korzysta z internetu za pomocą urządzeń mobilnych. 
 
 	Aby strona nadawała się do użytku na urządzeniach mobilnych trzeba pamietać o tym by:
 	
 	\begin{itemize}
-		\item Czcionka nie była zbyt mała - ponieważ wtedy strona staje się nieczytelna i wymaga powiekszenia widoku w celu odczytania jej treści 
-		\item Elementy dotykowe - czyli przyciski i linki nawigacyjne, nie były zbyt blisko siebie, ponieważ użytkownicy korzystając z takiej strony mają problemy z naciśnięciem wybranego elementu bez dotknięcia elementu sąsiadującego.
-		\item Rozmiar zawartości niedopasowany do widocznego obszaru - aby rozwiazać taki problem należy upewnić się czy strona korzysta z wartości względnych szerokości i pozycji elementów css. Ważne jest również to by obrazy się skalowały.
+		\item Czcionka nie była zbyt mała, ponieważ strona staje się nieczytelna i wymaga powiekszenia widoku w celu odczytania jej treści.
+		\item Elementy dotykowe, czyli przyciski i linki nawigacyjne, nie były zbyt blisko siebie, ponieważ użytkownicy korzystając z takiej strony mają problemy z naciśnięciem wybranego elementu, bez dotknięcia elementu sąsiadującego.
+		\item Jeżeli rozmiar zawartości jest niedopasowany do widocznego obszaru, należy upewnić się czy strona korzysta z wartości względnych szerokości i pozycji elementów css. Ważne jest również to, by obrazy się skalowały.
 	\end{itemize}
 	
+	\newpage
 	Aby przeglądarka odpowiednio przeskalowała zaprojektowaną stronę do rozmiarów okna w pliku \textit{app/views/layouts/application.html.erb} należy dodać meta-tag:
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Meta tag odpowiedzialny za skalowanie]
-	<head>
-	<title>Awaria <%= yield(:title) %></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	\end{lstlisting}
 	
-	Testy na optymalizacje mobilną, wykonałam za pomocą narzędzia \textbf{Mobile-Friendly Test - Google Search Console}.
+	Testy na optymalizacje mobilną, wykonałam za pomocą narzędzia \textbf{Mobile Friendly Test Google Search Console}.
 	
 	\begin{figure}[!tbh]
 		\centering
@@ -423,52 +391,97 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		\caption{Test optymalizacji mobilnej}
 	\end{figure}
 	
-	\section{Test szybkości ładowania strony}
-	Test szybkości ładowania strony polega na zbadaniu, to w jakim czasie ładuje się aplikacja. Im krótszy czas tym wyższa pozycja w Google. Według przeprowadzonych badań im wolniej ładuje się strona, tym mniej czasu spędza na niej użytkownik. Wywiera także istotny wpływ na przeglądanie podstron przez użytkownika i szybkie dotarcie przez niego do porządanych informacji co przekłada się na oszczędność czasu oraz oszczedność transferu w przypadku urządzeń mobilnych. Dzięki szybko działającej stronie roboty wyszukiwarek mogą szybciej przeskanować strone i wyszukać nowe treści.
+	\chapter{Test szybkości ładowania strony}
+	Test szybkości ładowania strony polega na zbadaniu w jakim czasie ładuje się aplikacja. Im krótszy czas tym wyższa pozycja w Google. Według przeprowadzonych badań, im wolniej ładuje się strona, tym mniej czasu spędza na niej użytkownik. Wywiera także istotny wpływ na przeglądanie podstron przez użytkownika i szybkie dotarcie przez niego do porządanych informacji. Przekłada się to na oszczędność czasu oraz oszczedność transferu w przypadku urządzeń mobilnych. Dzięki szybko działającej stronie, roboty wyszukiwarek mogą szybciej przeskanować strone i wyszukać nowe treści.
 	
-	Po wykonaniu testów narzędzie wskazało obszary w których miejscach należałoby użyć udoskonaleń, by strona ładowała się o wiele szybciej. Obszary dzielone są według trzech priorytetów: wysokim, średnim, niskim.
+	Po wykonaniu testów, narzędzie wskazało obszary, w których miejscach należałoby użyć udoskonaleń by strona ładowała się o wiele szybciej. Obszary dzielone są według trzech priorytetów: wysokim (\textit{kolor czerwony}), średnim (\textit{kolor żółty}), niskim (\textit{kolor zielony}).
 	
-	Na podstawie badań \textbf{PageSpeed Insights} aplikacja otrzymała następujące wyniki:
+	Według \textbf{PageSpeed Insights}, stronę można uznać za działającą dobrze, kiedy wynik w obu testach osiągnie conajmniej 85 punktów.\\
 	
-	Szybkość działania strony na komputerach PC \underline{\textbf{89/100}} - udoskonalenia na poziomie niskim
-	
-	Szybkość działania strony na urządzeniach mobilnych \underline{\textbf{71/100}} - udoskonalenia na poziomie średnim
-	
-	Według \textbf{PageSpeed Insights}, strone można uznać za działającą dobrze, kiedy wynik w obu testach osiągnie conajmniej 85 punktów.
+	\newpage
+	Na podstawie badań \textbf{PageSpeed Insights} aplikacja otrzymała następujące wyniki: 	
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/phone}
-		\caption{Wynik szybkości działania strony na komputerze}
+		\includegraphics[width=\linewidth]{image/phoneo}
+		\caption{Wynik szybkości działania strony na urządzeniach mobilnych}
 	\end{figure}
 	
-	Sugestie dotyczące poprawek jakie należałoby przeprowadzić:
-		\begin{itemize}
-			\item Wyeliminuj blokujący renderowanie kod JavaScript i CSS z części strony widocznej na ekranie. Strona zawiera blokujące skrypty (3) i blokujące zasoby CSS (3). Powoduje to opóźnienia w renderowaniu strony.
-			\item Wykorzystaj pamięć podręczną przeglądarki. Ustawienie daty wygaśnięcia lub maksymalnego wieku zasobów statycznych w nagłówkach HTTP powoduje, że przeglądarka wczytuje z lokalnego dysku twardego zasoby pobrane wcześniej, zamiast ponownie pobierać je z sieci.
-	\end{itemize}
+	\begin{figure}[!tbh]
+		\centering
+		\includegraphics[width=\linewidth]{image/computero}
+		\caption{Wynik szybkości działania strony na komputerze}
+	\end{figure}
 	\newpage
-	\textbf{Przestrzegane reguły, które zostały wykonane zgodnie z wymaganiami:}
-	\begin{itemize}
-		\item Nadaj priorytet widocznej treści: Część strony widoczna na ekranie ma odpowiedni priorytet.
-		\item Skróć czas odpowiedzi serwera: Serwer odpowiedział szybko.
-		\item Unikaj przekierowań stron docelowych: Strona nie zawiera przekierowań.
-		\item Włącz kompresję: Kompresja jest stosowana.
-		\item Zmniejsz CSS: Kod CSS jest zmniejszony.
-		\item Zmniejsz HTML: Kod HTML jest zmniejszony.
-		\item Zmniejsz JavaScript: Zawartość pliku JavaScript jest zmniejszona.
-		\item Zoptymalizuj obrazy: Grafiki są zoptymalizowane. 
-	\end{itemize}
+	Podczas wykonywania testów, aplikcja otrzymała kilka sugesti w celu poprawienia jakości, szybkości strony. W tabeli w punktach, wyszczególniono elementy, na które składa się szybsze ładowanie strony.
+	
+	\begin{table} [!h]
+		\centering
+		\begin{footnotesize}
+			\caption{Podsumowanie}
+	\begin{tabular}{|c|c|c|}
+		\hline  & Komputer  & Telefon \\ 
+		\hline  Skróć czas odpowiedzi serwera &  &  \\ 
+		\hline  Wyeliminuj blokujący renderowanie kod JavaScript i CSS &  &  \\ 
+		\hline Wykorzystaj pamięć podręczną przeglądarki &  &  \\ 
+		\hline Zoptymalizuj obrazy &  &  \\ 
+		\hline Włącz kompresję &  &  \\ 
+		\hline Nadaj priorytet widocznej treści & tak & tak \\ 
+		\hline Unikaj przekierowań stron docelowych & tak & tak \\ 
+		\hline Zmniejsz CSS & tak & tak \\ 
+		\hline Zmniejsz HTML & tak & tak \\ 
+		\hline Zmniejsz JavaScript & tak & tak \\ 
+		\hline 
+	\end{tabular}
+\end{footnotesize}
+\end{table}
+
+	
+	\begin{figure}[!tbh]
+		\centering
+		\includegraphics[width=\linewidth]{image/komp}
+		\caption{Wynik szybkości działania strony na komputerze po naprawie błędów}
+	\end{figure}
+	
+	\begin{figure}[!tbh]
+		\centering
+		\includegraphics[width=\linewidth]{image/teltest}
+		\caption{Wynik szybkości działania strony na telefonie po naprawie błędów}
+	\end{figure}
+	\newpage
+	
+	Po optymalizacji błędów, strona na komputer i telefon uzyskła kilka punktów więcej. Tabelka, po naprawie błędów prezentuje się następująco. 
+	
+	\begin{table} [!h]
+		\centering
+		\begin{footnotesize}
+			\caption{Podsumowanie po naprawie błędów}
+			\begin{tabular}{|c|c|c|}
+				\hline  & Komputer  & Telefon \\ 
+				\hline  Skróć czas odpowiedzi serwera & tak & tak \\ 
+				\hline  Wyeliminuj blokujący renderowanie kod JavaScript i CSS &  &  \\ 
+				\hline Wykorzystaj pamięć podręczną przeglądarki &  &  \\ 
+				\hline Zoptymalizuj obrazy & tak & tak \\ 
+				\hline Włącz kompresję & tak & tak \\ 
+				\hline Nadaj priorytet widocznej treści & tak & tak \\ 
+				\hline Unikaj przekierowań stron docelowych & tak & tak \\ 
+				\hline Zmniejsz CSS & tak & tak \\ 
+				\hline Zmniejsz HTML & tak & tak \\ 
+				\hline Zmniejsz JavaScript & tak & tak \\ 
+				\hline 
+			\end{tabular} 
+		\end{footnotesize}
+	\end{table}
 	
 	
-	\section{Walidacja kodu}
+	\chapter{Walidacja kodu}
 	
-	Walidacja to inaczej proces weryfikowania poprawności składniowej pliku XHTML. Wyróżnia się dwa rodzaje takiej poprawności składniowej: połączone z kontrolą zgodności z oficjalną specyfikacją XHTML, gdzie zastosowane zostają serwisy sieciowe tak zwane parasery oraz sprawdzanie wyłącznie poprawności składniowej w tym przypadku sotosuje się specjalne programy do tego przeznaczone czyli walidatory.\\
+	Walidacja to inaczej proces weryfikowania poprawności składniowej pliku XHTML. Wyróżnia się dwa rodzaje takiej poprawności składniowej: połączone z kontrolą zgodności z oficjalną specyfikacją XHTML, gdzie zastosowane zostają serwisy sieciowe, tzw. parasery oraz sprawdzanie wyłącznie poprawności składniowej. W tym przypadku stosuje się specjalne programy do tego przeznaczone, czyli walidatory.\\
 	
 	\textit{Dlaczego zatem należy używać walidacji ?}
 		\begin{itemize}
-			\item Ponieważ jeżeli kod strony jest poprawny to prawdopodobieństwo że strona będzie dobrze wyświetlana na większości przeglądarek jest większa.
-			\item Gdy strona nie zawiera błędów to szybciej się ładuje, gdyż nie musi zastanawiać się jak interpretować nie właściwie zamieszczone znaczniki.
+			\item Ponieważ, jeżeli kod strony jest poprawny to prawdopodobieństwo, że strona będzie dobrze wyświetlana na większości przeglądarek jest większa.
+			\item Gdy strona nie zawiera błędów, to szybciej się ładuje, gdyż nie musi zastanawiać się jak interpretować nie właściwie zamieszczone znaczniki.
 			\item Możliwość wykrycia i poprawy błedów przed oddaniem strony do użytku.
 			\item Dzięki walidacji możemy nabyć dodatkowej wiedzy o języku XHTML oraz w przypadku zmiany specyfikacji.
 		\end{itemize}
@@ -486,7 +499,7 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	% zakończenie
 	\summary
-	Tworzenie aplikacji w Ruby on Rails sprawiło że nabyłam kolejnych, nowych umiejetności.  Nauczyłam się nie tylko tworzenia elementów funkcjonalnych, nadawania szaty graficznej, testowania czy dopasowania strony do różnej rozdzielczości ale także rozwiązywania problemów z którymi borykałam się podczas tworzenia aplikacji a które umożliwiły mi poszerzenie wiedzy. Mam nadzieje że nabyte umiejętności wykorzystam w kolejnym samodzielnym projekcie który zamierzam zrealizować w najbliższym czasie.   
+	Tworzenie aplikacji w Ruby on Rails sprawiło, że nabyłam kolejne, nowe umiejetności.  Nauczyłam się tworzenia elementów funkcjonalnych, nadawania szaty graficznej, testowania oraz dopasowywania strony do różnej rozdzielczości. Mam nadzieje, że nabyte umiejętności wykorzystam w kolejnym, samodzielnym projekcie, który zamierzam zrealizować w najbliższym czasie.   
 	
 	% załączniki (opcjonalnie):
 	\appendix
@@ -525,6 +538,9 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\lstlistoflistings
 	\addcontentsline{toc}{chapter}{Spis kodów źródłowych}%
+	
+	% spis tabel (jeżeli jest potrzebny):
+	\listoftables
 	
 	\oswiadczenie
 	
