@@ -2,6 +2,13 @@
 % Jeśli nowe rozdziały mają się zaczynać na stronach nieparzystych:
 \documentclass[openright]{xmgr}
 
+\usepackage[utf8]{inputenc}
+
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\usepackage[dvipsnames]{xcolor}
+
 % install minted package to highlight source code
 %\usepackage{minted}
 %\defaultfontfeatures{Scale=MatchLowercase}
@@ -12,7 +19,16 @@
 % \setsansfont[Numbers=OldStyle,Mapping=tex-text]{Myriad Pro}
 %\setmonofont[Scale=0.75]{Monaco}
 \usepackage{listings}
-\lstset{basicstyle=\footnotesize, numbers=left, showspaces=false,showtabs=false,breaklines=true,showstringspaces=false,breakatwhitespace=true,frame=trBL, escapeinside={(*@}{@*)}}
+\lstloadlanguages{Ruby}
+\lstset{basicstyle=\footnotesize, numbers=left, showspaces=false,showtabs=false,breaklines=true,showstringspaces=false,breakatwhitespace=true,frame=trBL, escapeinside={(*@}{@*)},
+label=listing:RubyTest,
+float=h,
+caption=test.rb,
+firstnumber=1,
+language=Ruby,
+keywordstyle=\color{red},
+stringstyle=\color{blue},
+}
 \renewcommand{\lstlistlistingname}{Spis kodów źródłowych}
 % Opcjonalnie identyfikator dokumentu
 % drukowany tylko z włączoną opcją 'brudnopis':
@@ -66,35 +82,26 @@
 	\textbf{Widoki} \emph{(ang. View)} tworzą interfejs użytkownika aplikacji i służą do dostarczania danych do przeglądarki internetowej, bądź innego urządzenia. Są to pliki zawierające kod w języku Ruby i HTML.\\
 	
 	\textbf{Kontrolery} \emph{(ang. Controller)} w nich znajduje się cała logika aplikacji. Mają za zadanie połączyć model i widok. Odpowiadają za przetwarzanie żądań przychodzących z przeglądarki internetowej, za pozyskiwanie danych z modeli oraz przekazanie ich do widoków w celu ich reprezentacji.
-
+	\newpage
 	
 	\section{Bootstrap}
 	
-	Bootstrap, framework CSS, zawiera wiele narzędzi, które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza, by rozpocząć tworzenie czegoś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap, należy w pliku Gemfile dodać gem, który odpowiedzialny jest za odpowiednie funkcjonowanie Frameworka.
+	Bootstrap, framework CSS, zawiera wiele narzędzi, które przydają się podczas tworzenia interfejsu graficznego stron oraz aplikacji internetowych. Jest bardzo prosty w obsłudze, nie potrzeba wiele umiejętności żeby zacząć z nim pracować. Wystarczy podstawowa wiedza, by rozpocząć tworzenie czegoś własnego. Bootstrap bazuje głównie na gotowych rozwiązaniach HTML i CSS. Może być używany do stylizacji m.in. przycisków, formularzy, wykresów, nawigacji oraz innych komponentów wyświetlanych na stronie. Framework korzysta również z języka JavaScripts. By zacząć korzystać z platformy Bootstrap, należy w pliku Gemfile dodać gem, który odpowiedzialny jest za odpowiednie funkcjonowanie frameworka.
 	
-	\begin{center}
-		\textbf{\textit{gem ‘bootstrap-sass’, ‘~> 3.3.7’}}
-	\end{center}
-	Bootstrap jest platformą stylów CSS, więc każdy kod powinien być zapisany w pliku o dowolnej nazwie z rozszerzeniem \textit{*css.scss}. Pliki musza być umieszczone w przeznaczonym do tego katalogu \textit{/app/assets/stylesheets.\textbf{}}\\
-	
-	\begin{flushleft}
-		W plikach z rozszerzeniem musza znaleźć się dwa kody:
-	\end{flushleft}
-	
-	\textit{@import „Bootstrap-sprockets”\textbf{}}\\
-	
-	\textit{@import „Bootstrap”\textbf{}}\\
-	
-	
+	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Plik \textit{Gemfile}]
+gem 'bootstrap-sass', '~> 3.3.7'
+	\end{lstlisting}
+
+	Bootstrap jest platformą stylów CSS, więc każdy kod powinien być zapisany w pliku o dowolnej nazwie z rozszerzeniem \textit{*css.scss}. Pliki musza być umieszczone w przeznaczonym do tego katalogu \textit{/app/assets/stylesheets.\textbf{}}\\	
 	
 	\begin{flushleft}
 		Wymagane są również referencje do skryptów JavaScripts, które wykorzystywane są przez platformę.
 	\end{flushleft}
 	
-	\textit{//= require Bootstrap-sprockets\textbf{}}\\
-	
-	\textit{//= require Bootstrap\textbf{}}
-	
+	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Referencje do skryptów JavaScripts]
+//= require bootstrap-sprockets
+//= require bootstrap
+	\end{lstlisting}
 	
 	\chapter{Implementacja}
 	
@@ -117,37 +124,31 @@ Składa sie zazwyczaj z:\\
 	funkcji dialogowych np. zapytań potwierdzajacych usunięcie lub zmiane wydanego polecenia
 \end{itemize}
 	
-	\textbf{Projektowanie responsywne} \textit{(ang. responsive)} w polskim tłumaczeniu oznacza to coś czułego, wrażliwego i ma na celu tworzenie stron internetowych, które dynamicznie adaptują się do swojego środowiska. Dzięki temu strona ma płynną, elastyczną strukturę i dopasowuje się do dowlonego urządzenia: smartfona, tableta, telewizora lub komputera. Ponadto strony responsywne, są kompatybilne z interfejsami dotykowymi urządzeń mobilnych. 
+	\textbf{Projektowanie responsywne} \textit{(ang. responsive)} \cite{framework} w polskim tłumaczeniu oznacza to coś czułego, wrażliwego i ma na celu tworzenie stron internetowych, które dynamicznie adaptują się do swojego środowiska. Dzięki temu strona ma płynną, elastyczną strukturę i dopasowuje się do dowlonego urządzenia: smartfona, tableta, telewizora lub komputera. Ponadto strony responsywne, są kompatybilne z interfejsami dotykowymi urządzeń mobilnych. 
 	\newpage
 	\section{Panel logowania}
 	
-	Panel logowania użytkownika jest dla aplikacji istotnym elementem, ponieważ odbiorca wchodząc na strone zostaje automatycznie do niego przekierowany. Dlatego zadbałam o to, by strona w projekcie była atrakcyjna graficznie, a zarazem prosta w obsłudze. Główną zasadą, której trzymałam się podczas tworzenia front-endu była estetyka oraz niezróżnicowany wygląd aplikacji.  
+	Panel logowania użytkownika jest dla aplikacji istotnym elementem, ponieważ odbiorca wchodząc na strone zostaje automatycznie do niego przekierowany. Dlatego zadbałam o to, by strona w projekcie była atrakcyjna graficznie, a zarazem prosta w obsłudze. Główną zasadą, której trzymałam się podczas tworzenia frontendu była estetyka oraz niezróżnicowany wygląd aplikacji.  
 	
-	Wygląd panelu logowania przed ostylowaniem kodem HTML wyglądał przeciętnie, zawierał tylko jedną klase \textit{div class="field".}. Format panelu został przedstawiony poniżej:
+	Wygląd panelu logowania przed ostylowaniem kodem HTML wyglądał przeciętnie, zawierał tylko jedną klase \textit{div class="field"}. Format panelu został przedstawiony poniżej:
 	
 	\begin{figure}[!tbh]
 		\centering
 		\includegraphics[width=\linewidth]{image/panel}
-		\caption{Przykładowy dolny pasek nawigacji.}
-		\source{Opracowanie własne}
+		\caption{Panel logowania przed ostylowaniem kodem HTML}
 	\end{figure}
 	
 	\newpage
-	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Cześć kodu Ruby nieostylowanego kodem HTML]
-	<%= form_for(resource, as: resource_name,
-	url: session_path(resource_name)) do |f| %>
-	<div class="field">
-	<%= f.label :email %><br />
-	<%= f.email_field :email, autofocus: true %>
-	</div>
-	<div class="field">
-	<%= f.label :password %><br />
-	<%= f.password_field :password, autocomplete: "off" %>
-	</div>
-	\end{lstlisting} 
-	
-	Powyższy kod znajduje się w pliku
-	\textit{views/devise/sessions/new.html.erb}. 
+	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Kod odpowiedzialny za panel logowania]
+<div class="field">
+  <%= f.label :email %><br/>
+  <%= f.email_field :email, autofocus: true %>
+</div>
+<div class="field">
+  <%= f.label :password %><br/>
+  <%= f.password_field :password, autocomplete: "off" %>
+</div>
+	\end{lstlisting}
 	
 	\begin{figure}[!tbh]
 		\centering
@@ -156,30 +157,39 @@ Składa sie zazwyczaj z:\\
 	\end{figure}
 \newpage
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption= Kod obudowany kodem HTML]
-	<div class="container">
-	<div class="row">
-	<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-	<fieldset>
-	<h2>Zaloguj się</h2>
-	<hr class="colorgraph">
-	<div class="form-group">
-	<%= f.email_field :email, autofocus: true, class: "form-control input-lg", placeholder: "Adres email" %>
-	</div>
-	<div class="form-group">
-	<%= f.password_field :password, autocomplete: "off", class: "form-control input-lg", placeholder: "Hasło"  %>
-	</div>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+<fieldset>
+<h2 class="text-center">Zaloguj się</h2>
+<hr class="colorgraph">
+<div class="form-group">
+  <%= f.email_field :email, autofocus: true, class: "form-control input-lg", placeholder: "Adres email" %>
+</div>
+<div class="form-group">
+  <%= f.password_field :password, autocomplete: "off", class: "form-control input-lg", placeholder: "Haslo"  %>
+</div>
 	\end{lstlisting}
 
-W kodzie zastosowano poniższą klase \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}}, dzięki której uzyskujemy efekt strony responsywnej i możliwej do obejrzenia na dowolnym wyświetlaczu:\\
-\textbf{1.} \textit{col-xs} stosuje się dla bardzo małych wyświetlaczy (szerokość ekranu mniejsza niż 768 pikseli)\\
-\textbf{2.} \textit{col-sm} stosuje się dla małych wyświetlaczy (szerokość ekranu większa równa 768 pikseli)\\
-\textbf{3.} \textit{col-md} stosuje się dla średnich wyświetlaczy (szerokość ekranu wieksza, równa 992 pikseli)\\
+W kodzie zastosowano poniższą klase \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}}, dzięki której uzyskujemy efekt strony responsywnej \cite{css} i możliwej do obejrzenia na dowolnym wyświetlaczu:
+\begin{itemize}
+	\item
+\textit{col-xs} stosuje się dla bardzo małych wyświetlaczy (szerokość ekranu mniejsza niż 768 pikseli)
+\item
+\textit{col-sm} stosuje się dla małych wyświetlaczy (szerokość ekranu większa równa 768 pikseli)
+\item
+\textit{col-md} stosuje się dla średnich wyświetlaczy (szerokość ekranu wieksza, równa 992 pikseli)\\
+\end{itemize}
 
-Klasy służące do przesuwania kolumn względem siebie, służą do zwiększenia odstępu po lewej stronie kolumny: \\
-1. \textit{col-sm-offset-2} w przypadku stron dla małych wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą dwie kolumny w prawą strone\\
-2. \textit{col-md-offset-3} w przypadku stron dla średnich wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą trzy kolumny w prawą strone\\
-\newpage
-Aby była możliwość tworzenia rzędów, to \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}} musi zostać umieszczony w kontenerze \textit{div class="container"} oraz wewnątrz kontenera musi znaleźć się klasa \textit{div class="row"}.\\
+Klasy służące do przesuwania kolumn względem siebie, służą do zwiększenia odstępu po lewej stronie kolumny:
+\begin{itemize}
+\item
+\textit{col-sm-offset-2} w przypadku stron dla małych wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą dwie kolumny w prawą strone
+\item
+\textit{col-md-offset-3} w przypadku stron dla średnich wyświetlaczy, jeżeli chcemy przenieść kolumnę obejmującą trzy kolumny w prawą strone
+\end{itemize}
+
+\indent Aby była możliwość tworzenia rzędów, to \textbf{\textit{div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"}} musi zostać umieszczony w kontenerze \textit{div class="container"} oraz wewnątrz kontenera musi znaleźć się klasa \textit{div class="row"}.\\
 
 Klasa \textit{form-group} służy do tworzenia formularzy, natomiast klasa \textit{class: "form-control input-lg"} znajdująca się pomiedzy znacznikami kodu Ruby sprawia, że element rozciaga się na całą dostępną szerkość ekranu.
 
@@ -203,28 +213,25 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 \end{figure}	
 	
 	\section{Tabela zgłoszeń}
-	Tabele tworzy się poprzez znacznik \textit{<table> ... </table>} i wystarczy dodać do nich klasę \textit{.acrylic}, by uzyskać dopełnienie oraz linie oddzielające wiersze. Między znacznikami \textit{<tr>, <th>} umieszczamy kategorie, na które ma dzielić się dana tabelka. Wszystkie kategorie obudowane znacznikiem \textit{<th>}, należy umieścić w sekcji znacznika \textit{<thead>}. Natomiast zawartość danych tabeli umieszczamy między znacznikami \textit{<td>}, ważne jest to, by każda dana odpowiadała prawidłowej kolejności danej kategori.
 	
-	Wszystkie dane obudowane znacznikami \textit{<td>}, należy umieścić w sekcji znacznika \textit{<tbody>}.  
-	
-	Tabela zgłoszeń, po wygenerowniu kodu nie posiadała przycisków jej kolumny i wiersze nie były oddzielone linią w żaden sposób. Pod wpływem zmniejszania obrazu, tabela nie dopasowywała się do narzuconej jej rozdzielczości, czego efektem był brak możliwości odczytu niektórych danych, znajdujących sie w tabelce. 
+	Tabela zgłoszeń, po wygenerowniu kodu nie posiadała przycisków. Jej kolumny i wiersze nie były oddzielone linią w żaden sposób. Pod wpływem zmniejszania obrazu, tabela nie dopasowywała się do narzuconej jej rozdzielczości, czego efektem był brak możliwości odczytu niektórych danych, znajdujących sie w tabelce. 
 	
 	\begin{figure}[!tbh]
 		\centering
 		\includegraphics[width=\linewidth]{image/zgloszenie}
 		\caption{Tabela zgłoszeń po wygenerowaniu kodu}
 	\end{figure}
-\newpage	
+
+	Do stworzenia tabelki wykorzystano klasę \textit{div class="table-responsive"}, dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
+		
 	\begin{figure}[!tbh]
 		\centering
 		\includegraphics[width=\linewidth]{image/tabelka}
 		\caption{Ostylowana kodem HTML tabela zgłoszeń}
 	\end{figure}
 	
-	Do stworzenia tabelki wykorzystano klasę \textit{div class="table-responsive"}, dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
-	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny]
-	<td><%= link_to('Usuń', zgloszeny, method: :delete, data: { confirm: 'Jesteś pewny?' }, class:'btn btn-danger btn-xs') %></td>
+<%= link_to('Usun', zgloszeny, method: :delete, data: { confirm: 'Jestes pewny?' }, class:'btn btn-danger btn-xs') %>
 	\end{lstlisting}
 	
 	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger}, dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
@@ -233,18 +240,18 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\section{Uaktywnienie przypominania hasła na e-mail}
 	
-	Konfiguracji przpominania hasła na adres e-mail użytkownika, dokonuje się w pliku konfiguracyjnym \textit{config/environments/production.rb.} Ze względu na wdrożenie aplikacji na serwer Heroku, wykorzystałam dodatkowy element tej platformy do korespondencji z użytkownikiem o nazwie Sendgrid.  
+	Konfiguracji przpominania hasła na adres e-mail użytkownika \cite{configuration}, dokonuje się w pliku konfiguracyjnym \textit{config/environments/production.rb.} Ze względu na wdrożenie aplikacji na serwer Heroku, wykorzystałam dodatkowy element tej platformy do korespondencji z użytkownikiem o nazwie Sendgrid.  
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Konfiguracja pliku \textit{production.rb}]
-	config.action_mailer.smtp_settings = {
-	user_name: ENV['SENDGRID_USERNAME'],
-	password: ENV['SENDGRID_PASSWORD'],
-	domain: 'awaria-system.herokuapp.com',
-	address: 'smtp.sendgrid.net',
-	port: 587,
-	authentication: :plain,
-	enable_starttls_auto: true
-	}
+config.action_mailer.smtp_settings = {
+user_name: ENV['SENDGRID_USERNAME'],
+password: ENV['SENDGRID_PASSWORD'],
+domain: 'awaria-system.herokuapp.com',
+address: 'smtp.sendgrid.net',
+port: 587,
+authentication: :plain,
+enable_starttls_auto: true
+}
 	\end{lstlisting}
 	
 	W pliku, dane na temat hasła oraz nazwy użytkownika, zostały ukryte i dostępne są tylko dla użytkowników do tego uprawnionych. Wszystkie dane znajdują się na platformie Heroku. W sekcji \textit{domain} deklarujemy adres url strony pod który została wdrożona.
@@ -254,27 +261,29 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	W pracy wykorzystałam element e-maili powitalnych, podczas pierwszej wizyty na stronie, które informują użytkownika o pozytywnym przejściu rejestracji. Wiadomości powitalne wysyłane są automatycznie, tuż po aktywacji adresu mailowego. Są elementem podtrzymania dalszej komunikacji z klientem. Do zaimplementowania tej funkcjonalności wykorzystałam plik \textit{app/models/user.rb.} 
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Kod odpowiedzialny za wysyłanie e-mail powitalnych]
-	class User < ApplicationRecord
-	after_create :welcome_send
-	def welcome_send
+class User < ApplicationRecord
+  after_create :welcome_send
+  def welcome_send
 	WelcomeMailer.welcome_send(self).deliver
-	end
+  end
 	\end{lstlisting}
 	
-	W treści wiadomości, na adres użytkownika zostaje wysłane hasło, wprowadzone podczas rejestracji oraz logo firmy. Wiadomości przesłane zostają w formie \textit{html} oraz \textit{txt.} Wybrałam te dwa formaty, ponieważ \textit{txt} z pewnością trafi do każdego odbiorcy, natomiast wiadomości w formie \textit{html} mogą być nieczytelne dla niektórych przeglądarek pocztowych. Różnica polega na tym, że dzięki kodzie HTML wiadomości wyglądają atrakcyjniej graficznie.
+	W treści wiadomości, na adres użytkownika zostaje wysłane hasło, wprowadzone podczas rejestracji oraz logo firmy \cite{api}. Wiadomości przesłane zostają w formie \textit{html} oraz \textit{txt.} Wybrałam te dwa formaty, ponieważ \textit{txt} z pewnością trafi do każdego odbiorcy, natomiast wiadomości w formie \textit{html} mogą być nieczytelne dla niektórych przeglądarek pocztowych. Różnica polega na tym, że dzięki kodzie HTML wiadomości wyglądają atrakcyjniej graficznie.
 	Treści wiadomości powitalnych w formie \textit{.html} oraz \textit{.txt} zostały zawarte w pliku \textit{app/views/welcome\_mailer.}
 	
 	Na kolejnej stronie można zobaczyć, jak graficznie prezentują się wiadomości powitalne oraz jaką zawierają treść. 
 	\newpage
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/e-mail}
+		\includegraphics[width=\linewidth]{image/emailhtml}
 		\caption{Format \textit{.html}}
 	\end{figure}
+
+
 	\newpage
 	\section{Przeszukiwanie danych w czasie rzeczywistym}
 	
-	W aplikacji wykonano dodatkowo przeszukiwanie danych w czasie rzeczywistym, umożliwiające wyszukanie danych w tabeli. Używając filtru, można wyświetlić tylko dane, które nas interesują i ukryć pozostałe. Po przefiltrowaniu danych w zakresie tabel można ponownie zastosować filtr w celu otrzymania aktualnych danych, badź można wyczyścić filtr w celu ponownego wyświetlenia wszystkich danych w tabeli. 
+	W aplikacji wykonano dodatkowo przeszukiwanie danych w czasie rzeczywistym \cite{filtrowanie}, umożliwiające wyszukanie danych w tabeli. Używając filtru, można wyświetlić tylko dane, które nas interesują i ukryć pozostałe. Po przefiltrowaniu danych w zakresie tabel można ponownie zastosować filtr w celu otrzymania aktualnych danych, badź można wyczyścić filtr w celu ponownego wyświetlenia wszystkich danych w tabeli. 
 	Filtr, który zastosowałam w projekcie został stworzony dla tabel: użytkownika, stanowiska, działu, zgłoszeń. W przeszukiwniu danych dla jednej tabeli, zastosowałam kilka warunków. Podczas wpisywania fraz, program nie rozróżnia wielkości liter za co odpowiada operator ILIKE .\\
 	
 	\textbf{Tabela użytkowników, filtrowanie według:}\\
@@ -301,11 +310,9 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	\textit{app/controllers/zgloszenies\_controller.rb.}
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Dane według których nastepuje przeszukiwanie]
-	@zgloszenies = Zgloszenie.includes(:user)
-	.where("zgloszenies.nazwa_urzadzenia ILIKE :q OR users.email ILIKE :q OR 
-	users.first_name ILIKE :q OR users.last_name ILIKE :q", 
-	q: "%#{params[:search]}%").references(:users)
-	end
+@zgloszenies = Zgloszenie.includes(:user)
+.where("zgloszenies.nazwa_urzadzenia ILIKE :q OR users.email ILIKE :q OR users.first_name ILIKE :q OR users.last_name ILIKE :q", 
+q: "%#{params[:search]}%").references(:users)
 	\end{lstlisting}
 	
 	W tym pliku zostały zawarte wszystkie dane, które umożliwiają przeszukanie tabeli ,,zgłoszenie''. Referencje użytkownika zostały powiązane z tabelą zgłoszeń, co umożliwia nie tylko wyszukanie interesującego nas zgłoszenia, jak również na podstawie zgłoszeń możemy wyszukać w bazie użytkownika oraz sprawdzić jakie zgłoszenie złożył i w jakim czasie.
@@ -313,9 +320,9 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\textit{app/assets/javascripts/custom.js}
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=JavaScripts - przeszukiwanie w czasie rzeczywistym]
-	$(document).on('keyup', '.search_form_z input', function() {
-	$('.search_form_z').delay(200).submit();
-	});
+$(document).on('keyup', '.search_form_z input', function() {
+  $('.search_form_z').delay(200).submit();
+});
 	\end{lstlisting}
 	
 	Dzięki wykorzystanemu kodzie JavaScripts użytkownik podczas wpisywania frazy nie musi dodatkowo klikać na przycisk, proces odbywa się w momencie, kiedy w wyszukiwarke zostaje wprowadzona pierwsza litera. Czas wyszukiwania to 200 milisekund. 
@@ -326,43 +333,44 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\begin{itemize}
 		\item
-		\textbf{started} (przyjęcie usterki) - etap na którym, następuje zgłoszenie usterki w systemie
+		\textbf{started} \textit{(przyjęcie usterki)} etap na którym, następuje zgłoszenie usterki w systemie
 		
 		\item
-		\textbf{inprogress} (rozpoczęcie naprawy) - etap na którym, rozpoczyna się naprawę usterki
+		\textbf{inprogress} \textit{(rozpoczęcie naprawy)} etap na którym, rozpoczyna się naprawę usterki
 		
 		\item
-		\textbf{finished} (zakończenie naprawy) - etap na którym, zakończono naprawę usterki
+		\textbf{finished} \textit{(zakończenie naprawy)} etap na którym, zakończono naprawę usterki
 	\end{itemize}
 	
 	Do zaimplementowania tego elementu wykorzystałam plik znajdujący się w \textit{app/mailers/customer\_notification\_mailer.rb} w którym zawarłam kod:
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Opis statusów w modelu]
-	class CustomerNotificationMailer < ApplicationMailer
-	
-	def started(zgloszenie_id, user_id)
+class CustomerNotificationMailer < ApplicationMailer
+  def started(zgloszenie_id, user_id)
 	@zgloszenie = Zgloszenie.find(zgloszenie_id)
 	user = User.find(user_id)
 	mail(subject: default_i18n_subject, to: user.email) 
-	end
+  end
 	\end{lstlisting} 
 	
 	W pliku \textit{zgłoszenies\_controller.rb} znajdujący się w ścieżce
 	\textit{app/controllers} znjadują się kody:
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Powiadomienia o przyjęciu usterki do naprawy]
-	def create
-	CustomerNotificationMailer.started(@zgloszeny.id, @zgloszeny.user_id).deliver_later
+def create
+  CustomerNotificationMailer.started(@zgloszeny.id, @zgloszeny.user_id).deliver_later
+end
 	\end{lstlisting}
 	
 	Metoda \textit{def create} odpowiada za tworzenie nowych zgłoszeń do której przypisano status \textit{started}.
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Powiadomienia o rozpoczeciu i zakończeniu naprawy usterki]
-	def update
-	CustomerNotificationMailer.send(@zgloszeny.status, @zgloszeny.id, @zgloszeny.user_id).deliver_later if !@zgloszeny.started?
+def update
+  CustomerNotificationMailer.send(@zgloszeny.status, @zgloszeny.id, @zgloszeny.user_id).deliver_later if !@zgloszeny.started?
+end
 	\end{lstlisting}
 	
-	Metoda \textit{def update} odpowiada za edycję zgłoszeń do której przypisano status \textit{inprogress} i \textit{finished}, biorąc pod uwage to że status \textit{started} podczas edycji, przy kolejnej edycji, nie może  uzyskać już statusu początkowego.
+	Metoda \textit{def update} odpowiada za edycję zgłoszeń do której przypisano status \textit{inprogress} i \textit{finished}.
 	
 	\chapter{Testowanie aplikacji na urządzeniach mobilnych}
 	
@@ -377,10 +385,10 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	\end{itemize}
 	
 	\newpage
-	Aby przeglądarka odpowiednio przeskalowała zaprojektowaną stronę do rozmiarów okna w pliku \textit{app/views/layouts/application.html.erb} należy dodać meta-tag:
+	Aby przeglądarka odpowiednio przeskalowała zaprojektowaną stronę do rozmiarów okna w pliku \textit{app/views/layouts/application.html.erb} należy dodać meta-tag \cite{framework}:
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Meta tag odpowiedzialny za skalowanie]
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	\end{lstlisting}
 	
 	Testy na optymalizacje mobilną, wykonałam za pomocą narzędzia \textbf{Mobile Friendly Test Google Search Console}.
@@ -439,18 +447,18 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/komp}
+		\includegraphics[width=\linewidth]{image/computerr}
 		\caption{Wynik szybkości działania strony na komputerze po naprawie błędów}
 	\end{figure}
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/teltest}
+		\includegraphics[width=\linewidth]{image/phonee}
 		\caption{Wynik szybkości działania strony na telefonie po naprawie błędów}
 	\end{figure}
 	\newpage
 	
-	Po optymalizacji błędów, strona na komputer i telefon uzyskła kilka punktów więcej. Tabelka, po naprawie błędów prezentuje się następująco. 
+	Po optymalizacji błędów, strona na komputer i telefon uzyskła więcej punktów. Tabelka, po optymailizacji błędów prezentuje się następująco. 
 	
 	\begin{table} [!h]
 		\centering
@@ -460,7 +468,7 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 				\hline  & Komputer  & Telefon \\ 
 				\hline  Skróć czas odpowiedzi serwera & tak & tak \\ 
 				\hline  Wyeliminuj blokujący renderowanie kod JavaScript i CSS &  &  \\ 
-				\hline Wykorzystaj pamięć podręczną przeglądarki &  &  \\ 
+				\hline Wykorzystaj pamięć podręczną przeglądarki & tak & tak \\ 
 				\hline Zoptymalizuj obrazy & tak & tak \\ 
 				\hline Włącz kompresję & tak & tak \\ 
 				\hline Nadaj priorytet widocznej treści & tak & tak \\ 
@@ -493,7 +501,13 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	\begin{figure}[!tbh]
 		\centering
 		\includegraphics[width=\linewidth]{image/walidacja}
-		\caption{Wynik walidacji}
+		\caption{Wynik walidacji przed naprawą błędów}
+	\end{figure}
+	
+	\begin{figure}[!tbh]
+		\centering
+		\includegraphics[width=\linewidth]{image/walidacjaa}
+		\caption{Wynik walidacji po naprawie błędów}
 	\end{figure}
 	
 	
@@ -522,7 +536,7 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		Kurs frameworka Bootstrap. \texttt{\url{https://kursbootstrap.pl/}} \\(Grudzień 2, 2016).
 		\bibitem{html}
 		Strona zawierająca kody HTML/CSS/JS. \texttt{\url{http://bootsnipp.com/}} \\(Grudzień 2, 2016).
-		\bibitem{automatyzacja}
+		\bibitem{search}
 		Search and Filter Rails Models Without Bloating Your Controller. \\\texttt{\url{http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/}} \\(Grudzień 2, 2016).
 		\bibitem{delivery}
 		Action Mailer Basics. \\\texttt{\url{http://guides.rubyonrails.org/action_mailer_basics.html}} \\(Grudzień 2, 2016).
@@ -532,7 +546,10 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		Kurs CSS. \\\texttt{\url{http://webkod.pl/}} \\(Grudzień 2, 2016).
 		\bibitem{e-mail}
 		Open Source Email Templates. \\\texttt{\url{https://www.sendwithus.com/resources/templates/neopolitan}} \\(Grudzień 2, 2016).
+		\bibitem{filtrowanie}
+		Search, Sort, Paginate with AJAX. \\\texttt{\url{http://railscasts.com/episodes/240-search-sort-paginate-with-ajax?view=asciicast}} \\(Grudzień 2, 2016).
 	\end{thebibliography}
+	
 	% spis rysunków (jeżeli jest potrzebny):
 	\listoffigures
 	
