@@ -55,7 +55,7 @@ stringstyle=\color{blue},
 	\begin{abstract}
 		Praca przedstawia aplikację internetową o nazwie ,,Awaria'', która jest systemem rejestrującym usterki oraz naprawy sprzętu. Została stworzona w grupie 3-osobowej (Kamil Pek, Marcin Dawidowski, Dominika Pienczyn). W projekcie wykonałam szatę graficzną, tak zwany frontend aplikacji. Podczas tworzenia skupiałam się na tym, aby strona dostosowana była do urządzeń mobilnych, co obecnie jest standardem. Zajmowałam się również przeprowadzaniem testów strony, które uświadomiły mi jakie elementy należy jeszcze poprawić. Zaimplementowałam elementy, które poprawiły funkcjonowanie aplikacji: automatyzacja powiadomień, filtracja danych, uaktywnienie resetowania hasła oraz e-maili powitalnych podczas rejestracji.\\ 
 		\indent Do stworzenia aplikacji wykorzystano system Linux, bazę danych PostgreSQL, framework Ruby on Rails oraz Bootstrap, a następnie wdrożono ją na serwer Heroku.\\
-		\indent Wgląd do szerszej dokumentacji możliwy jest pod adresem \texttt{\url{https://github.com/dpienczyn/awaria1}} i przechowywany jest w repozytorium GitHuba razem z kodem aplikacji.\\
+		\indent Wgląd do szerszej dokumentacji możliwy jest pod adresem \texttt{\url{https://github.com/dpienczyn/awaria1}} \footnote{Dostęp do wdrożonego projektu, jest możliwy za pomocą następujących danych: konto administartora: \textbf{\textit{awaria.kontakt@gmail.com}} z hasłem do strony i e-maila \textbf{\textit{awaria1234567}}, konto pracownika:  \textbf{\textit{pracownik.awaria@gmail.com}} z hasłem do strony i e-maila \textbf{\textit{pracownikawaria}}, konto użytkownika: \textbf{\textit{user.awaria@gmail.com}} z hasłem do strony i e-maila \textbf{\textit{userawaria}}} i przechowywany jest w repozytorium GitHuba razem z kodem aplikacji.\\
 		\indent Aplikacja dostępna jest pod adresem \texttt{\url{https://awaria-system.herokuapp.com/}}.
 	\end{abstract}
 	
@@ -229,6 +229,7 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		\includegraphics[width=\linewidth]{image/tabelka}
 		\caption{Ostylowana kodem HTML tabela zgłoszeń}
 	\end{figure}
+	
 	
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny]
 <%= link_to('Usun', zgloszeny, method: :delete, data: { confirm: 'Jestes pewny?' }, class:'btn btn-danger btn-xs') %>
@@ -496,7 +497,7 @@ end
 		
 		Do walidacji kodu użyłam narzędzia dostępnego online o nazwie \textbf{W3C} znajdującego się pod adresem \texttt{\url{https://validator.w3.org}}.
 	
-	Wyniki walidacji wykazały niewielką ilość popełnionych błędów, co nie oznacza że nie należy ich wyeliminować:
+	Wyniki walidacji wykazały niewielką ilość popełnionych błędów, co nie oznacza że nie należy ich wyeliminować.
 	
 	\begin{figure}[!tbh]
 		\centering
@@ -506,7 +507,7 @@ end
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/walidacjaa}
+		\includegraphics[width=\linewidth]{image/validator}
 		\caption{Wynik walidacji po naprawie błędów}
 	\end{figure}
 	
@@ -517,13 +518,9 @@ end
 	
 	% załączniki (opcjonalnie):
 	\appendix
-	\chapter{Tytuł załącznika jeden}
+	\chapter{Płyta DVD z kodem źródłowym projektu}	
 	
-	Treść załącznika jeden.
-	
-	\chapter{Tytuł załącznika dwa}
-	
-	Treść załącznika dwa.
+	\chapter{Płyta DVD z plikami pracy licencjackiej}
 	
 	% literatura (obowiązkowo):
 	\begin{thebibliography}{11}
