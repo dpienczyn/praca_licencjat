@@ -221,21 +221,21 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		\includegraphics[width=\linewidth]{image/zgloszenie}
 		\caption{Tabela zgłoszeń po wygenerowaniu kodu}
 	\end{figure}
+	
+	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny w tabeli zgłoszeń]
+	<%= link_to('Usun', zgloszeny, method: :delete, data: { confirm: 'Jestes pewny?' }, class:'btn btn-danger btn-xs') %>
+	\end{lstlisting}
+	
+	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger}, dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
+	\newpage
 
 	Do stworzenia tabelki wykorzystano klasę \textit{div class="table-responsive"}, dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
 		
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/tabelka}
+		\includegraphics[width=\linewidth]{image/table2}
 		\caption{Ostylowana kodem HTML tabela zgłoszeń}
 	\end{figure}
-	
-	
-	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny]
-<%= link_to('Usun', zgloszeny, method: :delete, data: { confirm: 'Jestes pewny?' }, class:'btn btn-danger btn-xs') %>
-	\end{lstlisting}
-	
-	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger}, dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
 	
 	\chapter{Elementy funkcjonalne systemu}
 	
@@ -448,18 +448,18 @@ end
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/computerr}
+		\includegraphics[width=\linewidth]{image/wynik2}
 		\caption{Wynik szybkości działania strony na komputerze po naprawie błędów}
 	\end{figure}
 	
 	\begin{figure}[!tbh]
 		\centering
-		\includegraphics[width=\linewidth]{image/phonee}
+		\includegraphics[width=\linewidth]{image/wynik1}
 		\caption{Wynik szybkości działania strony na telefonie po naprawie błędów}
 	\end{figure}
 	\newpage
 	
-	Po optymalizacji błędów, strona na komputer i telefon uzyskła więcej punktów. Tabelka, po optymailizacji błędów prezentuje się następująco. 
+	Po optymalizacji błędów, strona na komputer i telefon uzyskła więcej punktów. Tabelka po optymailizacji błędów, prezentuje się następująco. 
 	
 	\begin{table} [!h]
 		\centering
