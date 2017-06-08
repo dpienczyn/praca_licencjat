@@ -189,7 +189,7 @@ W kodzie zastosowano poniższą klase \textbf{\textit{div class="col-xs-12 col-s
 \item
 \textit{col-md} stosuje się dla średnich wyświetlaczy (szerokość ekranu wieksza, równa 992 pikseli)\\
 \end{itemize}
-
+\newpage
 Klasy służące do przesuwania kolumn względem siebie, służą do zwiększenia odstępu po lewej stronie kolumny:
 \begin{itemize}
 \item
@@ -212,7 +212,7 @@ background: #c4e17f;
 border-radius: 5px;
 }
 \end{lstlisting}
-
+\newpage
 W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{checkbox}.\\
 
 \begin{figure}[!tbh]
@@ -220,7 +220,8 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 	\includegraphics[width=\linewidth]{image/checkbox}
 	\caption{Checkbox w panelu logowania}
 \end{figure}	
-	
+
+\newpage	
 	\section{Tabela zgłoszeń}
 	
 	Tabela zgłoszeń, po wygenerowniu kodu nie posiadała przycisków. Jej kolumny i wiersze nie były oddzielone linią w żaden sposób. Pod wpływem zmniejszania obrazu, tabela nie dopasowywała się do narzuconej jej rozdzielczości, czego efektem był brak możliwości odczytu niektórych danych, znajdujących sie w tabelce. 
@@ -230,14 +231,13 @@ W panelu logowania wykorzystano kod JavaScript obsługujący element \textit{che
 		\includegraphics[width=\linewidth]{image/zgloszenie}
 		\caption{Tabela zgłoszeń po wygenerowaniu kodu}
 	\end{figure}
-	
+
 	\begin{lstlisting}[language=Ruby,lineskip={-1pt},caption=Element klikalny w tabeli zgłoszeń]
 	<%= link_to('Usun', zgloszeny, method: :delete, data: { confirm: 'Jestes pewny?' }, class:'btn btn-danger btn-xs') %>
 	\end{lstlisting}
 	
 	Do stworzenia przycisku należało użyć klasy \textit{btn}. W klasie widzimy również \textit{btn-danger}, dzięki czemu element klikalny jest koloru czerwonego oraz \textit{btn-xs} co określa wielkość przycisku w tym przypadku jest to element bardzo mały. 
-	\newpage
-
+\newpage
 	Do stworzenia tabelki wykorzystano klasę \textit{div class="table-responsive"}, dzięki której tabela zamyka się w kontenerze z poziomym paskiem przewijania podczas mniejszych rozdzielczości.
 		
 	\begin{figure}[!tbh]
