@@ -20,14 +20,23 @@
 %\setmonofont[Scale=0.75]{Monaco}
 \usepackage{listings}
 \lstloadlanguages{Ruby}
-\lstset{basicstyle=\footnotesize, numbers=left, showspaces=false,showtabs=false,breaklines=true,showstringspaces=false,breakatwhitespace=true,frame=trBL, escapeinside={(*@}{@*)},
-label=listing:RubyTest,
-float=h,
-caption=test.rb,
-firstnumber=1,
-language=Ruby,
-keywordstyle=\color{red},
-stringstyle=\color{blue},
+\lstset{captionpos=b,
+	%numbers=left, %Nummerierung
+	%numberstyle=\tiny, % kleine Zeilennummern
+	frame=lines, % Oberhalb und unterhalb des Listings ist eine Linie
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	escapeinside={(*@}{@*)},
+	commentstyle=\color{greencomments},
+	morekeywords={partial, var, value, get, set},
+	keywordstyle=\color{bluekeywords},
+	stringstyle=\color{redstrings},
+	basicstyle=\ttfamily\small,
+	aboveskip=3em,
+	lineskip={0.3em}
 }
 \renewcommand{\lstlistlistingname}{Spis kodów źródłowych}
 % Opcjonalnie identyfikator dokumentu
