@@ -334,7 +334,7 @@ i~materialnych innych osób.\endgraf }
 %
 %
 \def\@BInterlinia{\relax}
-\def\@rodzajpracy{magisterska}
+\def\@rodzajpracy{licencjacka}
 %
 \def\IntroName{Wprowadzenie}
 \def\SummaryName{Zakończenie}
